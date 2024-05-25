@@ -1,0 +1,141 @@
+equipments = {
+
+	##### Tank
+	earth_tank_tech = {
+		year = 2024
+		is_archetype = yes
+		is_buildable = no
+		picture = archetype_modern_tank_equipment
+		type = armor
+		group_by = archetype
+		interface_category = interface_category_armor		
+	}
+	earth_tank_tech_SPAA = {
+		year = 2024
+		is_archetype = yes
+		is_buildable = no
+		picture = archetype_modern_tank_equipment
+		type = armor
+		group_by = archetype
+		interface_category = interface_category_armor		
+	}
+	earth_tank_tech_SPG = {
+		year = 2024
+		is_archetype = yes
+		is_buildable = no
+		picture = archetype_modern_tank_equipment
+		type = armor
+		group_by = archetype
+		interface_category = interface_category_armor		
+	}
+
+	LEOPARD_2A7 = {
+		year = 2024
+
+		archetype = earth_tank_tech
+		family = modern_tank_equipment
+
+		priority = 200
+		visual_level = 0
+
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_gun_upgrade
+		}
+
+		maximum_speed = 41
+		defense = 190
+ 		breakthrough = 150
+ 		armor_value = 800
+ 		soft_attack = 100
+ 		hard_attack = 670
+ 		ap_attack = 1400
+		hardness = 200
+		night_penalty = 0.9
+
+ 		build_cost_ic = 51
+		lend_lease_cost = 57
+
+ 		resources = {
+ 			oil = 7
+ 			steel = 32
+			chromium = 8
+			tungsten = 6
+		}
+	}
+
+	M109_Paladin = {
+		year = 2024
+
+		archetype = earth_tank_tech_SPG
+		family = modern_tank_equipment
+
+		priority = 200
+		visual_level = 0
+
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_gun_upgrade
+		}
+
+		maximum_speed = 47
+ 		defense = 120
+ 		breakthrough = 30
+ 		armor_value = 280
+ 		soft_attack = 655
+ 		hard_attack = 205
+		ap_attack = 350
+		hardness = 175
+
+ 		build_cost_ic = 41
+		lend_lease_cost = 54
+ 		resources = {
+ 			oil = 3
+ 			steel = 28
+ 			chromium = 6
+ 		}
+	}
+	
+	Flakpanzer_Gepard = {
+		year = 2024
+
+		archetype = earth_tank_tech_SPAA
+		family = modern_tank_equipment
+
+		priority = 200
+		visual_level = 0
+
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_gun_upgrade
+		}
+
+		maximum_speed = 44
+		defense = 200
+		breakthrough = 21
+		armor_value = 245
+		soft_attack = 100
+		hard_attack = 75
+		ap_attack = 25
+		air_attack = 560
+		hardness = 140
+
+		build_cost_ic = 36
+		lend_lease_cost = 50
+ 		resources = {
+ 			oil = 4
+ 			steel = 21
+ 			chromium = 4
+ 		}
+	}
+
+
+	##### Infantry
+	
+}

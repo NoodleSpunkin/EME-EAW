@@ -1,0 +1,24 @@
+﻿l_english:
+ earth_news.0.d:0 "A new race of species have appeared in our world. They call themselves 'humans' and are from the world they call Earth. They seem to have superior technology and to have the appearance of a monkey with no hair. They have taken the Cross island that once belonged to the Equestrian Commonwealth."
+ 
+ assassination_1:0 "§GOperation Successful§!"
+ assassination_2:0 "§ROperation Failed§!"
+ assassination_3:0 "§YOperation Successful§!"
+  
+ ## Events
+
+
+
+
+
+
+
+
+ ## News
+ news.2.d:0 "These humans reportedly kicked out the pony locals out of their homes in Cross island and sent them to the mainland of Equestria and the Equestrian Commonwealth."
+ Fallout.2.d:0 "In a startling development that has sent shockwaves across the globe, representatives from Earth have issued a stern message to Equestria and the international community, backed by the deployment of nuclear weapons. The announcement, shrouded in secrecy regarding its exact content, underscores Earth's resolve to assert its interests amidst rising tensions. This bold move comes at a time when diplomatic relations between Earth and Equestria have been strained, raising concerns about the potential for further escalation. Leaders from Equestria have responded with grave concern, calling for immediate dialogue and a return to peaceful negotiations. Princess Twilight Sparkle, representing Equestria, emphasized the importance of diplomacy in resolving conflicts and avoiding catastrophic consequences. The deployment of nuclear weapons has sparked widespread condemnation from the global community, with calls for restraint and a renewed commitment to diplomatic solutions echoing from capitals around the world."
+ Fallout.1.d:0 "In a startling announcement that has reverberated around the world, representatives from Earth have confirmed the deployment of nuclear weapons aimed at Equestria. This bold move comes amidst heightened tensions between the two entities, signaling a significant escalation in the ongoing diplomatic standoff. The announcement has elicited widespread concern and condemnation from the global community, with urgent calls for restraint and diplomatic dialogue to prevent further escalation and ensure the preservation of peace."
+ DEFCON.4.d:0 "In a dramatic escalation of tensions, Earth has raised its Defense Readiness Condition to Level 4, signaling heightened preparedness in the face of ongoing hostilities with Equestria. The decision to elevate the DEFCON level underscores the seriousness of the situation and the perceived threat posed by the conflict. With both sides engaged in a war footing, the global community watches with growing apprehension, urging for de-escalation and diplomatic efforts to halt the march towards further confrontation."
+ DEFCON.3.d:0 "In response to the escalating toll of the ongoing conflict with Equestria, Earth has raised its Defense Readiness Condition to Level 3, reflecting the increasing strain on financial resources and manpower. The decision signals a heightened state of alertness and preparedness as the war exacts a heavy toll on both sides. As the global community watches with concern, there is a growing recognition of the urgent need for dialogue and negotiation to bring an end to the conflict and prevent further devastation. With the stakes higher than ever."
+ DEFCON.2.d:0 "Amid rising tensions and the escalating conflict, with Equestria Earth has raised its Defense Readiness Condition (DEFCON) to Level 2. This significant step highlights the increasing seriousness of the situation as the war takes a toll on finances and stretches manpower thin. As casualties increase and the costs of war soar there are calls for a reevaluation of strategies resonating globally. The decision to elevate DEFCON to Level 2 emphasizes the nature of the circumstances and the need for action to address mounting pressures on resources and personnel. In a time of growing destruction leaders, from both sides face challenges in navigating through this crisis."
+ DEFCON.1.d:0 "Moving to DEFCON 1 shows how serious the situation is. It means the crisis is urgent and the military is on high alert. Tensions are very high and more fights could happen. Leaders from both sides face the truth of war with seriousness. The outcome affects Earth and Equestria. People worry and hope for a quick end to the growing crisis."

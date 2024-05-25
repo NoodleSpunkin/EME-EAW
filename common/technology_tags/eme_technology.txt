@@ -1,0 +1,5 @@
+technology_categories = {
+	earth_special_ops
+	Delta_Force_tech
+
+}

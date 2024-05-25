@@ -1,0 +1,15 @@
+spriteTypes = {
+
+	#########Bookmark
+
+	spriteType = {
+		name = "GFX_earth_bookmark"
+		textureFile = "gfx\interface\bookmark_earthlings.dds"
+	}
+	spriteType = {
+		name = "GFX_human_folder_tab"
+		textureFile = "gfx/interface/techtree/icons/human_folder_icon.dds"
+		noOfFrames = 2
+	}
+
+}

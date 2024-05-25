@@ -1,0 +1,10 @@
+country_with_custom_advisors = {
+	OR = {
+		original_tag = ERT
+	}
+}
+country_with_custom_designers = {
+	OR = {
+		original_tag = ERT
+	}
+}

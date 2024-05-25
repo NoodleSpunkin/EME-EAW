@@ -1,0 +1,43 @@
+#####################################################################################################################
+# COMMENTS HAVE BEEN INCLUDED FOR SAKE OF EXPLANATION, CAN BE REMOVED #
+# ID's must not include spaces!
+#####################################################################################################################
+war_plans = {
+	icon = GFX_decision_category_usa_intervention_mandate
+	priority = 1
+	
+	allowed = {
+		always = yes
+	}
+	visible = {
+		has_completed_focus = ERT_war_plans
+	}
+	visible_when_empty = no
+}
+CIA_operations = {
+	icon = GFX_decision_gre_hellenic_academy
+	priority = 998
+
+	allowed = {
+		always = yes
+	}
+	visible = {
+		original_tag = ERT
+		has_completed_focus = ERT_CIA
+	}
+	visible_when_empty = yes
+}
+
+CIA_SAC_operations = {
+	icon = GFX_decision_generic_intelligence_operation
+	priority = 999
+
+	allowed = {
+		always = yes
+	}
+	visible = {
+		original_tag = ERT
+		has_completed_focus = ERT_CIA_SAC
+	}
+	visible_when_empty = yes
+}

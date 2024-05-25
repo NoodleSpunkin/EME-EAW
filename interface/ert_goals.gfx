@@ -1,0 +1,290 @@
+spriteTypes = {
+
+
+	##########Ideologies
+	spriteType = {
+		name = GFX_ideology_ERT_Council_group
+		texturefile = "gfx/interface/ideologies/Council.dds"
+	}
+	spriteType = {
+		name = GFX_ideology_ERT_CJCS_group
+		textureFile = "gfx/interface/ideologies/CJCS.dds"
+	}
+	spriteType = {
+		name = GFX_ideology_ERT_Director_group
+		textureFile = "gfx/interface/ideologies/Council.dds"
+	}
+
+
+	#### Agency
+	spriteType = {
+		name = "GFX_intelligence_agency_logo_CIA"
+		textureFile = "gfx/interface/operatives/agencies/agency_logo_ert.dds"
+		noOfFrames = 2
+	}
+
+
+
+
+
+
+	####idea
+
+	spriteType = {
+		name = "GFX_Human_race"
+		textureFile = "gfx/interface/RACE/human_race.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_earth"
+		texturefile = "gfx/interface/goals/ERT/Earth.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_earth_training"
+		texturefile = "gfx/interface/goals/ERT/Training.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_advanced_technology"
+		texturefile = "gfx/interface/goals/ERT/Technology.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_research"
+		textureFile = "gfx/interface/goals/ERT/research.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Alpine"
+		textureFile = "gfx/interface/goals/ERT/Alpine.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_DEFCON1"
+		textureFile = "gfx/interface/goals/ERT/DEFCON1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_DEFCON2"
+		textureFile = "gfx/interface/goals/ERT/DEFCON2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_DEFCON3"
+		textureFile = "gfx/interface/goals/ERT/DEFCON3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_DEFCON4"
+		textureFile = "gfx/interface/goals/ERT/DEFCON4.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_lost"
+		textureFile = "gfx/interface/goals/ERT/confused.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_staff"
+		textureFile = "gfx/interface/goals/ERT/hat.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_satellite"
+		textureFile = "gfx/interface/goals/ERT/satellite_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_quarry"
+		textureFile = "gfx/interface/goals/ERT/quarry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_radioactive"
+		textureFile = "gfx/interface/goals/ERT/radioactive.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_liberty"
+		textureFile = "gfx/interface/goals/ERT/Liberty.dds"
+	}
+
+
+
+
+	
+
+	####Focus
+	spriteType = {
+		name = "GFX_focus_pentagon"
+		texturefile = "gfx/interface/goals/ERT/Pentagon.dds" 
+	}
+	spriteType = {
+		name = "GFX_focus_ATTACK"
+		texturefile = "gfx/interface/goals/ERT/LAUNCH.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_DEFCON2"
+		texturefile = "gfx/interface/goals/ERT/Nuclear.dds"
+	}spriteType = {
+		name = "GFX_focus_DEFCON1"
+		texturefile = "gfx/interface/goals/ERT/Nuclear1.dds"
+	}spriteType = {
+		name = "GFX_focus_DEFCON3"
+		texturefile = "gfx/interface/goals/ERT/eagle.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_DEFCON4"
+		texturefile = "gfx/interface/goals/ERT/Radar.dds"
+	}
+
+
+
+	spriteType = {
+		name = "GFX_focus_news"
+		texturefile = "gfx/interface/goals/ERT/news.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_tour"
+		texturefile = "gfx/interface/goals/ERT/tour.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_agreement"
+		texturefile = "gfx/interface/goals/ERT/Agreement.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_agreement_changeling"
+		texturefile = "gfx/interface/goals/ERT/Agreement_changeling.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_map"
+		texturefile = "gfx/interface/goals/ERT/Mapping.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_equus"
+		texturefile = "gfx/interface/goals/ERT/Equus.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_zebrica"
+		texturefile = "gfx/interface/goals/ERT/Zebrica.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_griffonia"
+		texturefile = "gfx/interface/goals/ERT/Griffonia.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_war_plans"
+		texturefile = "gfx/interface/goals/ERT/War_plans.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_construction"
+		texturefile = "gfx/interface/goals/ERT/construction.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_meeting"
+		texturefile = "gfx/interface/goals/ERT/meeting.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_CIA"
+		texturefile = "gfx/interface/goals/ERT/CIA.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_CIA_SAC"
+		texturefile = "gfx/interface/goals/ERT/CIA_SAC.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_satellite"
+		texturefile = "gfx/interface/goals/ERT/satellite.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_cell"
+		texturefile = "gfx/interface/goals/ERT/hostage.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_genocide"
+		texturefile = "gfx/interface/goals/ERT/genocide.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_cuff"
+		texturefile = "gfx/interface/goals/ERT/cuffs.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_fist"
+		texturefile = "gfx/interface/goals/ERT/fist.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_row"
+		texturefile = "gfx/interface/goals/ERT/group_row.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_pyramid"
+		texturefile = "gfx/interface/goals/ERT/pyramid.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_soldier"
+		texturefile = "gfx/interface/goals/ERT/soldier.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_hand"
+		texturefile = "gfx/interface/goals/ERT/hand.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_group"
+		texturefile = "gfx/interface/goals/ERT/group.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_genocide_wide"
+		texturefile = "gfx/interface/goals/ERT/wide_denial.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_swirl"
+		texturefile = "gfx/interface/goals/ERT/symbol.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_assassination"
+		texturefile = "gfx/interface/goals/ERT/scope.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_fuck_geneva"
+		texturefile = "gfx/interface/goals/ERT/geneva_burning.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_skull"
+		texturefile = "gfx/interface/goals/ERT/WMD.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_radiological"
+		texturefile = "gfx/interface/goals/ERT/Nuclear2.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_radiological_red"
+		texturefile = "gfx/interface/goals/ERT/Nuclear3.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_atom"
+		texturefile = "gfx/interface/goals/ERT/atom.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_chemical"
+		texturefile = "gfx/interface/goals/ERT/chemical.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_Council"
+		texturefile = "gfx/interface/goals/ERT/leader_Council.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_COS"
+		texturefile = "gfx/interface/goals/ERT/leader_ChiefOfStaff.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_Director"
+		texturefile = "gfx/interface/goals/ERT/leader_Director.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_SAC_rescue"
+		texturefile = "gfx/interface/goals/ERT/SAC_rescue.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_CIA_offensive"
+		texturefile = "gfx/interface/goals/ERT/knife_wings.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_CIA_defensive"
+		texturefile = "gfx/interface/goals/ERT/knife_lock.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_CIA_security"
+		texturefile = "gfx/interface/goals/ERT/arrested_ponies.dds"
+	}
+	
+}
+
+
+
+

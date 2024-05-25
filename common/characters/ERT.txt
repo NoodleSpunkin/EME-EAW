@@ -1,0 +1,347 @@
+characters={
+	ERT_Council={
+		name = "The Unified Earth Council"
+		portraits={
+			civilian={
+				large="gfx/leaders/ERT/Council.tga"
+			}
+		}
+		country_leader={
+			desc="The_Council"
+			ideology= Collective
+			traits={ ERT_Council }
+		}
+		
+		gender = male
+	}
+	ERT_Daniel = {
+		name = "Daniel [CJCS]"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ERT/CJCS_Daniel.tga"
+				small = "GFX_idea_ERT_ERT_Daniel"
+			}
+		}
+		country_leader = {
+			ideology = Strategic_Autonomy
+			desc = "ERT_Daniel"
+			traits={ ERT_CJCS }
+		}
+		advisor = {
+			slot = high_command
+			idea_token = ERT_Daniel
+			traits = { ERT_CJCS }
+			cost = 500
+			visible = {
+				NOT = { 
+					has_country_leader = {
+						character = ERT_Daniel
+					}
+				}
+			}
+		}
+		field_marshal = {
+			skill = 9
+			attack_skill = 10
+			defense_skill = 10
+			planning_skill = 10
+			logistics_skill = 10
+			traits = { ERT_CJCS old_guard trait_cautious logistics_wizard organizer }
+		}
+		gender = male
+	}
+	ERT_Charles = {
+		name = "Director Charles"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ERT/Charles.tga"
+			}
+		}
+		country_leader = {
+			ideology = Technocratic_Efficiency
+			desc = "ERT_Charles"
+			traits={ ERT_Director }
+		}
+		gender = male
+	}
+	ERT_Troops = {
+		name = "Field Officers"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/ERT/Standby.tga"
+			}
+		}
+		country_leader = {
+			ideology = centrism
+			desc = "ERT_Standby"
+		}
+	}
+	
+
+	################ Political Advisors
+	ERT_Atlas_Steele = {
+		name = "Atlas Steele"
+		
+		portraits = {
+			civilian = {
+				small = "GFX_idea_ERT_Atlas_Steele"
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = Atlas_Steele
+			traits = { ERT_head_researcher }
+		}
+	}
+	ERT_Serena_Vaughn = {
+		name = "Serena Vaughn"
+		
+		portraits = {
+			civilian = {
+				small = "GFX_idea_ERT_Serena_Vaughn"
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = Serena_Vaughn
+			traits = { ERT_politcal_affairs }
+		}
+	}
+	ERT_Victor_Irons = {
+		name = "Victor Irons"
+		
+		portraits = {
+			civilian = {
+				small = "GFX_idea_ERT_Victor_Irons"
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = Victor_Irons
+			traits = { ERT_internal_affairs }
+		}
+	}
+	ERT_Aurora_Paxton = {
+		name = "????? 'Hawk' ???????"
+		
+		portraits = {
+			civilian = {
+				small = "GFX_idea_ERT_Aurora_Paxton"
+			}
+		}
+
+		advisor = {
+			available = {
+				has_intelligence_agency = yes
+				has_completed_focus = ERT_CIA
+			}
+			visible = {
+				has_dlc = "La Resistance"
+			}
+			slot = political_advisor
+			idea_token = Aurora_Paxton
+			traits = { ERT_CIA_director }
+			cost = 300
+		}
+	}
+	ERT_Phoenix_Blackwood = {
+		name = "Phoenix Blackwood"
+		
+		portraits = {
+			civilian = {
+				small = "GFX_idea_ERT_Phoenix_Blackwood"
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = Phoenix_Blackwood
+			traits = { ERT_senior_diplomat }
+		}
+	}
+	ERT_Xavier_Hawthorne = {
+		name = "Xavier Hawthorne"
+		
+		portraits = {
+			civilian = {
+				small = "GFX_idea_ERT_xavier_Hawthorne"
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			idea_token = xavier_Hawthorne
+			traits = { ERT_backstage_manager }
+		}
+	}
+
+	################### Theorists
+
+
+
+	################### Generals / Field Marshals / Joint Cheif of Staff
+	ERT_Charles_Manning = {
+		name = "Charles Manning"
+		
+		portraits = {
+			civilian = {
+				large = "GFX_idea_ERT_Charles"
+				small = "GFX_idea_ERT_Charles_Manning"
+			}
+		}
+		navy_leader  = {
+			skill = 9
+			attack_skill = 9
+			defense_skill = 9
+			planning_skill = 10
+			logistics_skill = 10
+			traits = { ERT_CoS old_guard war_hero }
+		}
+		advisor = {
+			slot = high_command
+			idea_token = Charles_Manning
+			cost = 350
+			traits = { ERT_VCJCS }
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = Charles_Manning
+			cost = 250
+			traits = { ERT_FA }
+		}
+	}
+	ERT_James_Donovan = {
+		name = "James Donovan"
+
+		portraits = {
+			civilian = {
+				large = "GFX_idea_ERT_James"
+				small = "GFX_idea_ERT_James_Donovan"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = James_Donovan
+			cost = 250
+			traits = { ERT_CoS }
+			
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = James_Donovan
+			cost = 250
+			traits = { ERT_GoArF }
+		}
+	}
+	ERT_Isaac_Fletcher = {
+		name = "Isaac Fletcher"
+
+		portraits = {
+			civilian = {
+				large = "GFX_idea_ERT_Isaac"
+				small = "GFX_idea_ERT_Isaac_Fletcher"
+			}
+		}
+		field_marshal = {
+			skill = 9
+			attack_skill = 9
+			defense_skill = 5
+			planning_skill = 10
+			logistics_skill = 7
+			traits = { ERT_CoS old_guard war_hero trait_cautious commando }
+		}
+		advisor = {
+			slot = high_command
+			idea_token = Isaac_Fletcher
+			cost = 250
+			traits = { ERT_CoS }
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = Isaac_Fletcher
+			cost = 250
+			traits = { ERT_MCC }
+		}
+	}
+	ERT_Henry_Wallace = {
+		name = "Henry Wallace"
+
+		portraits = {
+			civilian = {
+				large = "GFX_idea_ERT_Henry"
+				small = "GFX_idea_ERT_Henry_Wallace"
+			}
+		}
+		field_marshal = {
+			skill = 9
+			attack_skill = 7
+			defense_skill = 8
+			planning_skill = 7
+			logistics_skill = 8
+			traits = { ERT_CoS old_guard war_hero trait_reckless }
+		}
+		
+		advisor = {
+			slot = high_command
+			idea_token = Henry_Wallace
+			cost = 250
+			traits = { ERT_CoS }
+			
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = Henry_Wallace
+			cost = 250
+			traits = { ERT_GoA }
+		}
+	}
+
+	############################## Generals
+
+	ERT_general_Bulb = {
+		name = "Louis 'Bulb' Jackson"
+
+		portraits = {
+			civilian = {
+				large = x
+			}
+		}
+
+		corps_commander = {
+			skill = 7
+			attack_skill = 7
+			defense_skill = 4
+			planning_skill = 8
+			logistics_skill = 6
+			traits = {
+				infantry_officer
+				infantry_leader
+			}
+		}
+	}
+	ERT_general_Coat = {
+		name = "Luke 'Coat' Broad"
+
+		portraits = {
+			civilian = {
+				large = x
+			}
+		}
+
+		corps_commander = {
+			skill = 7
+			attack_skill = 8
+			defense_skill = 6
+			planning_skill = 9
+			logistics_skill = 5
+			traits = {
+				armor_officer
+				armor_leader
+			}
+		}
+	}
+
+}

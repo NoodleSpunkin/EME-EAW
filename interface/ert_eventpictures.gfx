@@ -1,0 +1,42 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_Earth_has_landed"
+		textureFile = "gfx/event_pictures/event_humans.dds"
+	}
+	spriteType = {
+		name = "GFX_Cross_island"
+		textureFile = "gfx/event_pictures/event_cross.dds"
+	}
+	spriteType = {
+		name = "GFX_fallout"
+		textureFile = "gfx/event_pictures/event_fallout.dds"
+	}
+	spriteType = {
+		name = "GFX_ICBM"
+		textureFile = "gfx/event_pictures/event_ICBM.dds"
+	}
+	spriteType = {
+		name = "GFX_DEFCON1"
+		textureFile = "gfx/event_pictures/event_DEFCON1.dds"
+	}
+	spriteType = {
+		name = "GFX_DEFCON2"
+		textureFile = "gfx/event_pictures/event_DEFCON2.dds"
+	}
+	spriteType = {
+		name = "GFX_DEFCON3"
+		textureFile = "gfx/event_pictures/event_DEFCON3.dds"
+	}
+	spriteType = {
+		name = "GFX_DEFCON4"
+		textureFile = "gfx/event_pictures/event_DEFCON4.dds"
+	}
+	spriteType = {
+		name = "GFX_sniper"
+		textureFile = "gfx/event_pictures/event_sniper.dds"
+	}
+	spriteType = {
+		name = "GFX_heli"
+		textureFile = "gfx/event_pictures/event_heli.dds"
+	}
+}

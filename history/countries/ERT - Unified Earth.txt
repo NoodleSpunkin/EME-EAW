@@ -1,0 +1,164 @@
+﻿capital = 1209
+oob = "ERT_2074"
+set_research_slots = 2
+
+set_technology = {
+	### General
+	human_race = 1
+	tech_support = 1
+
+	### Earth Equipment
+	earth = 1
+	Earth_grade_AT = 1
+	Earth_grade_tactical_equipment = 1
+	Earth_grade_support = 1
+	Earth_grade_engineers = 1
+	Earth_grade_recon = 1
+	Earth_grade_scout_helis = 1
+	Earth_grade_attack_helis = 1
+	Earth_grade_transport_helis = 1
+	Earth_standard_issued = 1
+	Earth_grade_trucks = 1
+	Earth_grade_mechanized = 1
+	Earth_grade_armored_car = 1
+	Earth_grade_tank = 1
+	Earth_grade_SPG = 1
+	Earth_grade_SPAA = 1
+	Earth_grade_AA = 1
+	Earth_grade_artillery = 1
+	Earth_grade_rocket_artillery = 1
+	Earth_grade_attacker = 1
+	Earth_grade_tac_bomber = 1
+	Earth_grade_fighter = 1
+	Earth_grade_recon = 1
+	Earth_grade_strategic_bomber = 1
+	Earth_grade_carrier_multirole = 1
+
+
+	army_integration = 1
+	veteran_experience = 1
+	assault_squadrons = 1
+	independent_strike_groups = 1
+	massed_forces = 1
+	super_elite_forces = 1
+	wilderness_specialization = 1
+	urban_specialization = 1
+	elite_forces = 1
+	survival_training = 1
+	extreme_environment_training = 1
+	improved_special_forces = 1
+	advanced_special_forces = 1
+	tech_special_forces = 1
+
+	paratroopers = 1				
+	paratroopers2 = 1				
+	marines = 1						
+	marines2 = 1
+	tech_recon = 1					
+	tech_mountaineers = 1			
+	tech_support = 1
+	tech_military_police = 1
+	tech_maintenance_company = 1
+	tech_field_hospital = 1
+	tech_logistics_company = 1
+	tech_signal_company = 1
+	basic_train = 1
+
+	
+	#aircraft
+}
+
+
+actually_fix_weapon_techs = yes
+
+add_ideas = {
+	human_race
+	Earth_supply
+	Earth_Research
+	unfamiliar_land
+	advanced_technology
+	other_world
+	closed_economy
+	partial_economic_mobilisation
+	Great_unification_war
+}
+
+set_convoys = 30
+set_popularities = {
+	Council = 100
+	CJCS = 0
+	Director = 0
+	neutrality = 0
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1000.10.10"
+	election_frequency = 1
+	elections_allowed = no
+}
+
+set_stability = 0.95
+set_war_support = 0.55
+set_variable = {
+	manpower = 4860000000
+}
+
+set_major = yes
+
+recruit_character = ERT_Council
+recruit_character = ERT_Daniel
+recruit_character = ERT_Charles
+recruit_character = ERT_Troops
+
+#############  Advisors
+recruit_character = ERT_Atlas_Steele
+recruit_character = ERT_Serena_Vaughn
+recruit_character = ERT_Victor_Irons
+recruit_character = ERT_Aurora_Paxton
+recruit_character = ERT_Phoenix_Blackwood
+recruit_character = ERT_Xavier_Hawthorne
+
+
+############# Field Marshals / Cheif of Staff
+recruit_character = ERT_Henry_Wallace
+recruit_character = ERT_Isaac_Fletcher
+recruit_character = ERT_James_Donovan
+recruit_character = ERT_Charles_Manning
+
+############# Generals
+recruit_character = ERT_general_Bulb
+recruit_character = ERT_general_Coat
+
+
+set_party_name = {
+	ideology = Director
+	long_name = ERT_Long_Name_Peace
+	name = "The Director"
+}
+
+set_party_name = {
+	ideology = Council
+	long_name = ERT_Long_Name_Liber
+	name = "The Council"
+}
+
+set_party_name = {
+	ideology = CJCS
+	long_name = ERT_Long_Name_Military
+	name = "Militarised Control"
+}
+
+set_party_name = {
+	ideology = neutrality
+	long_name = ERT_Long_Name_No
+	name = "Field Officers"
+}
+
+set_rule = {
+	can_generate_female_aces = yes
+	can_generate_female_unit_leaders  = yes
+	can_generate_female_country_leaders = yes
+	can_create_collaboration_government = yes
+}
+

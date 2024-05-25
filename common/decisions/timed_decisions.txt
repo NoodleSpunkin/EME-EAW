@@ -1,0 +1,317 @@
+#####################################################################################################################
+# COMMENTS HAVE BEEN INCLUDED FOR SAKE OF EXPLANATION, CAN BE REMOVED #
+# ID's must not include spaces!
+# Decisions MUST be visible for the AI to execute them, if in doubt, switch tag to the AI country and check if they can see/execute the mission.
+#####################################################################################################################
+war_plans = {
+	execute_chamelion = {
+		icon = GFX_decision_generic_intelligence_operation
+		days_remove = 365
+		is_good = yes
+
+		available = {
+			original_tag = ERT
+			has_war_with = CHN
+		}
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ERT_war_plan_skinwalker
+		}
+		targeted_modifier = {
+			tag = CHN
+			attack_bonus_against = 0.4
+			defense_bonus_against = 0.4
+			planning_speed = 0.6
+		}
+	}
+	execute_pony = {
+		icon = GFX_decision_generic_intelligence_operation
+		days_remove = 365
+		is_good = yes
+
+		available = {
+			OR = {
+				has_war_with = EQS
+				has_war_with = EQC
+				has_war_with = CRY
+				has_war_with = STG
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = ERT_war_plan_pony
+		}
+		targeted_modifier = {
+			tag = EQS
+			attack_bonus_against = 0.4
+			defense_bonus_against = 0.4
+			planning_speed = 0.6
+		}
+		targeted_modifier = {
+			tag = CRY
+			attack_bonus_against = 0.4
+			defense_bonus_against = 0.4
+			planning_speed = 0.6
+		}
+		targeted_modifier = {
+			tag = EQC
+			attack_bonus_against = 0.4
+			defense_bonus_against = 0.4
+			planning_speed = 0.6
+		}
+	}
+	execute_scales = {
+		icon = GFX_decision_generic_intelligence_operation
+		days_remove = 365
+		is_good = yes
+
+		available = {
+			has_war_with = DRG
+		}
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ERT_war_plan_scales
+		}
+		targeted_modifier = {
+			tag = DRG
+			attack_bonus_against = 0.4
+			defense_bonus_against = 0.4
+			planning_speed = 0.6
+		}
+	}
+	execute_buffalo = {
+		icon = GFX_decision_generic_intelligence_operation
+		days_remove = 100
+		is_good = yes
+
+		available = {
+			has_war_with = BUF
+		}
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ERT_war_plan_buffalo
+		}
+		targeted_modifier = {
+			tag = BUF
+			attack_bonus_against = 0.4
+			defense_bonus_against = 0.4
+			planning_speed = 0.6
+		}
+	}
+	execute_animals = {
+		icon = GFX_decision_generic_intelligence_operation
+		days_remove = 730
+		is_good = yes
+
+		available = {
+			OR = {
+				has_war_with = PNG
+				has_war_with = GFF
+				has_war_with = YAK
+				has_war_with = JAK
+				has_war_with = OLE
+				has_war_with = GRF
+				has_war_with = POL
+			}
+		}
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ERT_war_plan_animal
+		}
+		targeted_modifier = {
+			tag = POL
+			attack_bonus_against = 0.4
+			defense_bonus_against = 0.4
+			planning_speed = 0.6
+		}
+		targeted_modifier = {
+			tag = OLE
+			attack_bonus_against = 0.4
+			defense_bonus_against = 0.4
+			planning_speed = 0.6
+		}
+		targeted_modifier = {
+			tag = YAK
+			attack_bonus_against = 0.4
+			defense_bonus_against = 0.4
+			planning_speed = 0.6
+		}
+		targeted_modifier = {
+			tag = JAK
+			attack_bonus_against = 0.4
+			defense_bonus_against = 0.4
+			planning_speed = 0.6
+		}
+		targeted_modifier = {
+			tag = GRF
+			attack_bonus_against = 0.4
+			defense_bonus_against = 0.4
+			planning_speed = 0.6
+		}
+		targeted_modifier = {
+			tag = GFF
+			attack_bonus_against = 0.4
+			defense_bonus_against = 0.4
+			planning_speed = 0.6
+		}
+		targeted_modifier = {
+			tag = PNG
+			attack_bonus_against = 0.4
+			defense_bonus_against = 0.4
+			planning_speed = 0.6
+		}
+	}
+	execute_equus = {
+		icon = GFX_decision_generic_intelligence_operation
+		days_remove = 800
+		is_good = yes
+
+		available = {
+			any_enemy_country = {
+				capital_scope = {
+					OR = {
+						is_on_continent = europe
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		visible = {
+			has_completed_focus = ERT_war_plan_animal
+		}
+		targeted_modifier = {
+			tag = EQS
+			attack_bonus_against = 0.4
+			defense_bonus_against = 0.4
+			planning_speed = 0.6
+		}
+	}
+
+}
+
+CIA_operations = {
+	screening_and_arrest = {
+		icon = x
+		days_remove = 31
+		days_re_enable = 62
+		is_good = yes
+		visible = {
+			has_completed_focus = ERT_CIA_security
+		}
+
+		available = {
+			
+		}
+
+		modifier = {
+			enemy_operative_detection_chance_factor = 0.5
+			enemy_operative_capture_chance_factor = 1
+		}
+	}
+}
+
+CIA_SAC_operations = {
+	execute_silence_royal = {
+		icon = GFX_decision_spr_political_assassination
+		days_remove = 7
+		available = {
+			command_power > 50
+			has_political_power > 100
+			has_completed_focus = ERT_silence_royals
+			has_completed_focus = ERT_CIA_SAC
+		}
+		visible = {
+			has_completed_focus = ERT_silence_royals
+		}
+		days_re_enable = 30
+		fire_only_once = no
+		remove_effect = {
+			random_list = {
+				45 = {
+					custom_effect_tooltip = success_kill_loc
+					hidden_effect = {
+						EQS = {
+							kill_country_leader = yes
+							add_stability = -0.5
+						}
+						news_event = earth_assassinations.1
+					}
+				}
+				40 = {
+					custom_effect_tooltip = operation_failure_loc
+					hidden_effect = {
+						news_event = earth_assassinations.2
+					}
+				}
+				15 = {
+					custom_effect_tooltip = success_but_traced_loc
+					hidden_effect = {
+						EQS = {
+							kill_country_leader = yes
+							add_stability = -3
+							create_wargoal = {
+								target = ERT
+								type = topple_government
+							}
+						}
+						news_event = earth_assassinations.3
+					}
+				}
+			}
+			hidden_effect = {
+				add_command_power = -50
+				add_political_power = -100
+			}
+		}
+		modifier = {
+			command_power_gain = -0.2
+			political_power_gain = -0.4
+		}
+		fixed_random_seed = no
+		
+	}
+
+	SAC_rescue_operatives = {
+		icon = GFX_decision_eng_trade_unions_demand
+		days_remove = 31
+		available = {
+			command_power > 20
+			has_completed_focus = ERT_SAC_rescue
+			any_other_country = {
+				has_captured_operative = ERT
+			}
+		}
+
+
+		fire_only_once = no
+		days_re_enable = 7
+		complete_effect = {
+			custom_effect_tooltip = SAC_rescue_operation_0
+		}
+		remove_effect = {
+			hidden_effect = {
+				every_other_country = {
+					LIMIT = {
+						has_captured_operative = ERT
+					}
+					ERT = {
+						free_random_operative = {
+							captured_by = PREV
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = SAC_rescue_operation_1
+
+		}
+	}
+
+
+}
+
+

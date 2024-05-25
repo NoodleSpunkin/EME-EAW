@@ -1,0 +1,8 @@
+supply_area={
+	id=1
+	name="Earth!"
+	value=30
+	states={
+		1209
+	}
+}

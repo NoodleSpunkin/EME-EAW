@@ -1,0 +1,8 @@
+state_categories={
+	earth = {
+		local_building_slots = 100
+	
+		color = { 100 200 0 }
+
+	}
+}

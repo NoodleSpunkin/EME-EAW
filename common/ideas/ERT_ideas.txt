@@ -1,0 +1,386 @@
+ideas = {
+	country = {
+		
+		###Spirit
+		Earth_supply = {
+			name = "Supplies from Earth"
+			picture = earth
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				supply_factor = 10
+				max_fuel = 1000000
+				base_fuel_gain = 200000
+			}
+		}
+		
+		Earth_Research = {
+			name = "Modern Research"
+			picture = research
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				research_speed_factor = 1
+				set_research_slots = 4
+				
+			}
+		}
+
+		advanced_technology = {
+			name = "Supercomputers"
+			picture = advanced_technology
+
+			allowed = {
+				has_dlc = "La Resistance"
+			}
+			
+			available = {
+				has_dlc = "La Resistance"
+			}
+
+			cancel_if_invalid = yes
+
+			modifier = {
+				decryption_factor = 2
+				encryption_factor = 2
+				hidden_effect = {
+					crypto_department_enabled = 1
+					crypto_strength = 100
+				}
+			}
+		}
+
+		other_world = {
+			name = "Other World Species"
+			picture = x
+
+			allowed = {
+				always = no
+			}
+
+			available = {
+				
+			}
+
+			cancel_if_invalid = no
+
+			modifier = {
+				resistance_decay = -0.4
+				required_garrison_factor = 0.4
+				resistance_damage_to_garrison_on_our_occupied_states = -0.2
+			}
+		}
+		unfamiliar_land = {
+			name = "Unfamiliar World"
+			picture = lost
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_speed_factor = -0.4
+				army_speed_factor = -0.6
+				breakthrough_factor = -0.5
+				army_org_factor = -0.4
+				army_org_regain = -0.3
+				coordination_bonus = -0.5
+				initiative_factor = -0.4
+				org_loss_when_moving = 0.3
+				planning_speed = -0.2	
+			}
+		}
+		Great_unification_war = {
+			name = "The Great Unification War"
+			picture = liberty
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				army_morale_factor = 0.5
+				experience_gain_army_factor = -0.15
+				max_training = 0.5
+				offence = 0.2
+			}
+		}
+
+
+		###Ideas
+
+		General_staff = {
+			name = "Military Staff"
+			picture = staff
+
+			allowed = {
+				always = yes
+			}
+
+			available = {
+				
+			}
+			modifier = {
+				planning_speed = 0.2
+				max_command_power = 10
+			}
+		}
+		Fallout = {
+			name = "Wide Nuclear Fallout"
+			picture = radioactive
+
+			allowed = {
+				always = yes
+			}
+
+			available = {
+			
+			}
+			cancel_if_invalid = no
+			
+			modifier = {
+				army_org_factor = -1.5
+				defence = -0.4
+				offense = -0.4
+				attrition = 1.5
+				breakthrough_factor = -0.4
+				army_speed_factor = -0.5
+				army_morale_factor = -0.5
+				army_org_regain = -1
+				dig_in_speed_factor = -0.4
+				max_dig_in_factor = -0.2
+				hidden_effect = {
+					add_stability = -0.5
+					command_power_gain = -0.5
+				}
+			}
+		}
+		Satellites = {
+			name = "Satellites"
+			picture = satellite
+			allowed = {
+				always = yes
+			}
+
+			available = {
+				focus = ERT_satellites
+			}
+			cancel_if_invalid = yes
+
+			modifier = {
+				recon_factor = 2
+				coordination_bonus = 0.3
+				land_night_attack = 0.1
+				naval_night_attack = 0.1
+				spotting_chance = 1.5
+			}
+		}
+
+		C2_Alpine = {
+			name = "Command and Control Center Alpine"
+			picture = Alpine
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				max_command_power = 50
+				command_power_gain	= 5
+				army_org = 10
+				planning_speed = 0.2
+			}
+		}
+		mining_quarry = {
+			name = "Mining Quarries"
+			picture = quarry
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				local_resources_factor = 0.5
+			}
+		}
+
+		##################### DEFCON LEVELS ###########################################################
+		
+		DEFCON_1 = {
+			name = "DEFCON LEVEL 1!"
+			picture = DEFCON1
+
+			allowed = {
+				always = yes
+			}
+			available = {
+				has_war = yes
+				threat > 0.5
+			}
+			cancel_if_invalid = yes
+
+			modifier = {
+				planning_speed = 0.8
+				army_org_factor = 0.7
+				land_reinforce_rate = 0.4
+				command_power_gain = 2
+				army_attack_factor = 0.5
+				army_defence_factor = 0.6
+				recon_factor = 0.9
+			}
+		}
+
+		DEFCON_2 = {
+			name = "DEFCON LEVEL 2!"
+			picture = DEFCON2
+
+			allowed = {
+				always = yes
+			}
+			available = {
+				has_war = yes
+				threat > 0.3
+			}
+			cancel_if_invalid = yes
+
+			modifier = {
+				planning_speed = 0.6
+				army_org = 0.5
+				land_reinforce_rate = 0.3
+				command_power_gain = 1.5
+				army_attack_factor = 0.3
+				army_defence_factor = 0.4
+				recon_factor = 0.6
+			}
+		}
+
+		DEFCON_3 = {
+			name = "DEFCON LEVEL 3"
+			picture = DEFCON3
+
+			allowed = {
+				always = yes
+			}
+			available = {
+				threat > 0.3
+			}
+			cancel_if_invalid = yes
+
+			modifier = {
+				planning_speed = 0.3
+				army_org = 0.3
+				land_reinforce_rate = 0.2
+				command_power_gain = 1
+				army_attack_factor = 0.2
+				army_defence_factor = 0.25
+				recon_factor = 0.35
+			}
+		}
+
+		DEFCON_4 = {
+			name = "DEFCON Level 4"
+			picture = DEFCON4
+
+			allowed = {
+				always = yes
+			}
+			available = {
+				threat > 0.15
+			}
+			cancel_if_invalid = yes
+
+			modifier = {
+				army_org = 0.2
+				army_defence_factor = 0.2
+				planning_speed = 0.2
+				recon_factor = 0.25
+			}
+		}
+
+		
+
+
+
+
+
+
+		################# Negotiation Results ######################
+		
+		Geneva_Convention_signed = {
+			name = "Signed Earth's Geneva Convention"
+			picture = x
+
+			allowed = {
+				always = yes
+			}
+			
+			modifier = {
+				targeted_modifier = {
+					tag = ERT
+					attack_bonus_against = -0.15
+				}
+			}
+		}
+		Geneva_Convention_rejected = {
+			name = "Geneva Convention Not Signed >:)"
+			picture = x
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				attack_bonus_against = 0.4
+				
+			}
+		}
+		Earth_Equestrian_Embassy = {
+			name = "Earth-Equestrian Embassy"
+			picture = x
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				targeted_modifier = {
+					OR = {
+						tag = EQS
+						tag = EQC
+						tag = CRY
+						tag = ERT
+					}
+					trade_opinion_factor = 0.5
+				}
+			}
+		}
+
+
+		################ Designer Companies ###############################
+		aircraft_manufacturer = {
+			designer = yes
+
+			Lockheed_Martin = {
+				picture = x
+				allowed = {
+					original_tag = ERT
+				}
+				available = {
+					
+				}
+				research_bonus = {
+					
+				}
+				traits = {
+					Lockheed_Martin_manufacturer
+				}
+			}
+		}
+	}
+}

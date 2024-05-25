@@ -1,0 +1,116 @@
+spriteTypes = {
+
+	### Infantry Tab ###
+	# Infantry Weapons
+	SpriteType = {
+		name = "GFX_Earth_standard_issued_medium"
+		texturefile = "gfx/interface/technologies/ERT/Earth_standard_issued.dds"
+	}
+	SpriteType = {
+		name = "GFX_Earth_grade_support_medium"
+		texturefile = "gfx/interface/technologies/ERT/Earth_grade_support.dds"
+	}
+	SpriteType = {
+		name = "GFX_Earth_grade_tactical_equipment_medium"
+		texturefile = "gfx/interface/technologies/ERT/Earth_grade_tactical_equipment.dds"
+	}
+	SpriteType = {
+		name = "GFX_Earth_grade_AT_medium"
+		texturefile = "gfx/interface/technologies/ERT/Earth_grade_AT.dds"
+	}
+	SpriteType = {
+		name = "GFX_Earth_grade_trucks_medium"
+		texturefile = "gfx/interface/technologies/ERT/Earth_grade_trucks.dds"
+	}
+	SpriteType = {
+		name = "GFX_Earth_grade_mechanized_medium"
+		texturefile = "gfx/interface/technologies/ERT/Earth_grade_mechanized.dds"
+	}
+	SpriteType = {
+		name = "GFX_Earth_grade_armored_car_medium"
+		texturefile = "gfx/interface/technologies/ERT/Earth_grade_armored_car.dds"
+	}
+
+	# Air
+	SpriteType = {
+		name = "GFX_earth_medium"
+		texturefile = "gfx/interface/technologies/ERT/earth.dds"
+	}
+	SpriteType = {
+		name = "GFX_Earth_grade_attacker_medium"
+		texturefile = "gfx/interface/technologies/ERT/Earth_grade_attacker.dds"
+	}
+	SpriteType = {
+		name = "GFX_Earth_grade_tac_bomber_medium"
+		texturefile = "gfx/interface/technologies/ERT/Earth_grade_attacker.dds"
+	}
+	SpriteType = {
+		name = "GFX_Earth_grade_fighter_medium"
+		texturefile = "gfx/interface/technologies/ERT/Earth_grade_fighter.dds"
+	}
+	SpriteType = {
+		name = "GFX_Earth_grade_recon_medium"
+		texturefile = "gfx/interface/technologies/ERT/Earth_grade_recon.dds"
+	}
+	SpriteType = {
+		name = "GFX_Earth_grade_strategic_bomber_medium"
+		texturefile = "gfx/interface/technologies/ERT/Earth_grade_strategic_bomber.dds"
+	}
+
+	# Armor
+	SpriteType = {
+		name = "GFX_Earth_grade_tank_medium"
+		texturefile = "gfx/interface/technologies/ERT/Earth_grade_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_Earth_grade_SPG_medium"
+		texturefile = "gfx/interface/technologies/ERT/Earth_grade_SPG.dds"
+	}
+	SpriteType = {
+		name = "GFX_Earth_grade_SPAA_medium"
+		texturefile = "gfx/interface/technologies/ERT/Earth_grade_SPAA.dds"
+	}
+
+	# Artillery
+	SpriteType = {
+		name = "GFX_Earth_grade_AA_medium"
+		texturefile = "gfx/interface/technologies/ERT/Earth_grade_AA.dds"
+	}
+	SpriteType = {
+		name = "GFX_Earth_grade_artillery_medium"
+		texturefile = "gfx/interface/technologies/ERT/Earth_grade_artillery.dds"
+	}
+	SpriteType = {
+		name = "GFX_Earth_grade_rocket_artillery_medium"
+		texturefile = "gfx/interface/technologies/ERT/Earth_grade_rocket_artillery.dds"
+	}
+
+	# Support
+	SpriteType = {
+		name = "GFX_Earth_grade_engineers_medium"
+		texturefile = "gfx/interface/technologies/ERT/Earth_grade_engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_Earth_grade_scout_helis_medium"
+		texturefile = "gfx/interface/technologies/ERT/Earth_grade_scout_helis.dds"
+	}
+	SpriteType = {
+		name = "GFX_Earth_grade_attack_helis_medium"
+		texturefile = "gfx/interface/technologies/ERT/Earth_grade_attack_helis.dds"
+	}
+	SpriteType = {
+		name = "GFX_Earth_grade_transport_helis_medium"
+		texturefile = "gfx/interface/technologies/ERT/Earth_grade_transport_helis.dds"
+	}
+
+
+	################## Jets
+	SpriteType = {
+		name = "GFX_ERT_jet_fighter_3_medium"
+		texturefile = "gfx/interface/technologies/ERT/ERT_jet_fighter_03.dds"
+	}
+	SpriteType = {
+		name = "GFX_ERT_jet_fighter_2_medium"
+		texturefile = "gfx/interface/technologies/ERT/ERT_jet_fighter_02.dds"
+	}
+}

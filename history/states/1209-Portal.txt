@@ -1,0 +1,33 @@
+state={
+	id=1209
+	name="STATE_1209"
+	resources = {
+		steel = 1000
+		oil = 1000
+		tungsten = 1000
+		rubber = 1000
+		aluminium = 1000
+		chromium = 1000
+	}
+	state_category = earth
+	history={
+		owner = ERT
+		add_core_of = ERT
+
+		buildings = {
+			infrastructure = 5
+			arms_factory = 10
+			industrial_complex = 10
+			anti_air_building = 5
+			radar_station = 4
+		}
+		victory_points = {
+			20729 100
+		}
+	}
+	provinces={
+		20729
+	}
+	manpower=6100511
+	buildings_max_level_factor=2.000
+}

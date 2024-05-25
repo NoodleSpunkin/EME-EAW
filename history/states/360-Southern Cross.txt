@@ -1,0 +1,39 @@
+state={
+	id=360
+	name="STATE_360"
+
+	provinces={
+		60 140 2057 3057 5027 5058 11103 11168 11178
+	}
+	resources={
+		crystals = 20
+	}
+	
+	manpower=0
+	state_category = rural
+	buildings_max_level_factor=1
+
+	history = {
+		owner = ERT
+		add_core_of = EQC
+		
+		victory_points = { 11103 5 }
+
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			radar_station = 3
+			anti_air_building  = 3
+
+			11103 = { naval_base = 5 dockyard = 20}
+			5058 = { coastal_bunker = 5 }
+			140 = { coastal_bunker = 5 }
+			2057 = { coastal_bunker = 5 }
+			5027 = { naval_base = 5 coastal_bunker = 5 }
+			11103 = { coastal_bunker = 5 }
+			11168 = { coastal_bunker = 5 }
+			11178 = { coastal_bunker = 5 }
+			
+		}
+	}
+}

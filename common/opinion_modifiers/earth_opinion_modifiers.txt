@@ -1,0 +1,28 @@
+
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+	accepted_negotiations = {
+		value = 20
+		years = 2
+	}
+	declines_negotiations = {
+		value = -40
+		years = 2
+	}
+	unrecognized_speicies = {
+		value = -50
+		years = 2
+		decay = -0.01
+	}
+	Earth_Equestrian_Embassy = {
+		value = 40
+	}
+}

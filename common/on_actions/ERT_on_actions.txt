@@ -1,0 +1,51 @@
+on_actions = {
+	# country
+
+	
+	on_startup = {
+		effect = {
+			ERT = {
+				add_manpower = 4680000
+				add_ideas = human_race
+				complete_national_focus = unfamiliar_with_magic
+				add_fuel = 9999999
+				
+			}
+			every_country = {
+				news_event = earth_news.0
+			}
+			EQC = {
+				create_wargoal = {
+					target = ERT
+					type = Retake_core_state
+				}
+			}
+			set_province_name = {
+				id = 11103
+				name = "FOB Echo Peak"
+			}
+			every_country = {
+				limit = {
+					NOT = {
+						original_tag = EQS
+					}
+				}
+				add_opinion_modifier = {
+					target = ERT
+					modifier = unrecognized_speicies
+				}
+			}
+		}
+	}
+
+	on_declare_war = {
+		effect = {
+			ERT = {
+				news_event = earth_news.1
+			}
+		}
+	}
+
+	
+	
+}

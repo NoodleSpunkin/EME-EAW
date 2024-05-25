@@ -1,0 +1,117 @@
+add_namespace = Fallout
+add_namespace = DEFCON
+
+country_event = {
+	id = Fallout.2
+	title = "Equestria Now Under Nuclear Fallout"
+	desc = Fallout.2.d
+	picture = GFX_fallout
+
+	major = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = ERT_DEFCON_0
+	}
+
+	option = {
+		name = "We must not interfere with the humans"
+		add_threat = 0.5
+	}
+	option = {
+		name = "Bring the ponies to the negotiations table"
+		add_threat = 0.2
+		trigger = {
+			tag = ERT
+		}
+		
+	}
+}
+
+news_event = {
+	id = Fallout.1
+	title = "Earth Threatens to use 'Nukes'"
+	desc = Fallout.1.d
+	picture = GFX_ICBM
+
+	major = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		focus_progress = {
+			focus = ERT_DEFCON_0
+			progress = 1
+		}	
+	}
+
+	option = {
+		name = "Let's see what happens"
+	}
+}
+
+###################################### DEFCON Level
+
+country_event = {
+	id = DEFCON.1
+	title = "MOVING TO DEFCON 1!"
+	desc = DEFCON.1.d
+	picture = GFX_DEFCON1
+
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = ERT_DEFCON_1
+	}
+
+	option = {
+		name = "READY THE NUKES!"
+	}
+}
+
+country_event = {
+	id = DEFCON.2
+	title = "MOVING TO DEFCON 2!"
+	desc = DEFCON.2.d
+	picture = GFX_DEFCON2
+
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = ERT_DEFCON_2
+	}
+
+	option = {
+		name = "May God have mercy on their souls"
+	}
+}
+
+country_event = {
+	id = DEFCON.3
+	title = "MOVING TO DEFCON 3!"
+	desc = DEFCON.3.d
+	picture = GFX_DEFCON3
+
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = ERT_DEFCON_3
+	}
+
+	option = {
+		name = "Start the clock..."
+	}
+}
+
+country_event = {
+	id = DEFCON.4
+	title = "We're entering DEFCON 4!"
+	desc = DEFCON.4.d
+	picture = GFX_DEFCON4
+
+	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = ERT_DEFCON_4
+	}
+
+	option = {
+		name = "Wait... Really?"
+	}
+}
+

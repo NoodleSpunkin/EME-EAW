@@ -1,0 +1,66 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_ERT_Atlas_Steele"
+		textureFile = "gfx/interface/ideas/ERT/idea_ert_Atlas_Steele.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ERT_Serena_Vaughn"
+		textureFile = "gfx/interface/ideas/ERT/idea_ert_Serena_Vaughn.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ERT_Victor_Irons"
+		textureFile = "gfx/interface/ideas/ERT/idea_ert_Victor_Irons.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ERT_Aurora_Paxton"
+		textureFile = "gfx/interface/ideas/ERT/idea_ert_Aurora_Paxton.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ERT_Phoenix_Blackwood"
+		textureFile = "gfx/interface/ideas/ERT/idea_ert_Phoenix_Blackwood.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ERT_xavier_Hawthorne"
+		textureFile = "gfx/interface/ideas/ERT/idea_ert_xavier_Hawthorne.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ERT_ERT_Daniel"
+		textureFile = "gfx/interface/ideas/ERT/idea_ert_ERT_Daniel.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ERT_James_Donovan"
+		textureFile = "gfx/interface/ideas/ERT/idea_ert_James_Donovan.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ERT_Isaac_Fletcher"
+		textureFile = "gfx/interface/ideas/ERT/idea_ert_Isaac_Fletcher.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ERT_Henry_Wallace"
+		textureFile = "gfx/interface/ideas/ERT/idea_ert_Henry_Wallace.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ERT_Charles_Manning"
+		textureFile = "gfx/interface/ideas/ERT/idea_ert_Charles_Manning.dds"
+	}
+
+	####### Field Marshals | Chief of Staff
+	spriteType = {
+		name = "GFX_idea_ERT_Henry"
+		textureFile = "gfx/leaders/ERT/Henry_Wallace.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ERT_Isaac"
+		textureFile = "gfx/leaders/ERT/Isaac_Fletcher.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ERT_James"
+		textureFile = "gfx/leaders/ERT/James_Donovan.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ERT_Charles"
+		textureFile = "gfx/leaders/ERT/Charles_Manning.dds"
+	}
+}
+
+

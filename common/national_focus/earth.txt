@@ -1,0 +1,1401 @@
+focus_tree = {
+	id = ert_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			original_tag = ERT
+		}
+	}
+	continuous_focus_position = { x = 50 y = 5000 }
+
+	focus = {
+		id = ERT_military_options
+		icon = GFX_focus_pentagon
+		cost = 0.2
+		x = 10
+		y = 1
+	}
+	focus = {
+		id = ERT_geneva
+		icon = x
+		cost = 3
+		x = 6
+		y = 2
+		prerequisite = {
+			focus = ERT_military_options
+		}
+		mutually_exclusive = { focus = ERT_war_crimes }
+	}
+	focus = {
+		id = ERT_war_crimes
+		icon = GFX_focus_fuck_geneva
+		cost = 3
+		x = 14
+		y = 2
+		prerequisite = {
+			focus = ERT_military_options
+		}
+		mutually_exclusive = { focus = ERT_geneva }
+	}
+	focus = {
+		id = ERT_WMDs
+		icon = GFX_focus_skull
+		cost = 21
+		x = 14
+		y = 3
+		prerequisite = {
+			focus = ERT_war_crimes
+		}
+		completion_reward = {
+			hidden_effect = {
+				unlock_decision_category_tooltip = WMDs
+				division_template = {
+					name = "CBRN Unit"
+					regiments = {
+						CBRN = { x = 0 y = 0 }
+						CBRN = { x = 0 y = 1 }
+						CBRN = { x = 0 y = 2 }
+						CBRN = { x = 0 y = 3 }
+					}
+				}
+			}
+			custom_effect_tooltip = WMD_focus
+		}
+	}
+	focus = {
+		id = ERT_WMD_chemical
+		icon = GFX_focus_chemical
+		cost = 25
+		x = 13
+		y = 4
+		prerequisite = {
+			focus = ERT_WMDs
+		}
+		completion_reward = {
+			hidden_effect = {
+				country_event = earth_WMDs.0
+				unlock_decision_tooltip = earth_WMDs.0
+			}
+			add_equipment_to_stockpile = {
+				type = earth_chemical_gas_0
+				amount = 100000
+			}
+			add_equipment_to_stockpile = {
+				type = earth_chemical_gas_1
+				amount = 100000
+			}
+			add_equipment_to_stockpile = {
+				type = earth_chemical_gas_2
+				amount = 100000
+			}
+		}
+	}
+	focus = {
+		id = ERT_WMD_biological
+		icon = GFX_focus_atom
+		cost = 25
+		x = 11
+		y = 4
+		prerequisite = {
+			focus = ERT_WMDs
+		}
+		completion_reward = {
+			hidden_effect = {
+				country_event = earth_WMDs.1
+			}
+			add_equipment_to_stockpile = {
+				type = earth_biological_weapon_0
+				amount = 100000
+			}
+			
+		}
+	}
+	focus = {
+		id = ERT_WMD_radiological
+		icon = GFX_focus_radiological
+		cost = 25
+		x = 15
+		y = 4
+		prerequisite = {
+			focus = ERT_WMDs
+		}
+		completion_reward = {
+			hidden_effect = {
+				country_event = earth_WMDs.2
+			}
+		}
+	}
+	focus = {
+		id = ERT_WWD_nuclear
+		icon = GFX_focus_radiological_red
+		cost = 25
+		x = 17
+		y = 4
+		prerequisite = {
+			focus = ERT_WMDs
+		}
+		completion_reward = {
+			hidden_effect = {
+				country_event = earth_WMDs.3
+	
+			}
+			add_nuclear_bombs = 5
+		}
+	}
+
+	
+
+	############################################ DEFCON Levels
+
+	focus = {
+		id = ERT_DEFCON_0
+		icon = GFX_focus_ATTACK
+		cost = 0.6
+		x = 10
+		y = 14
+		available = {
+			has_war = yes
+			threat > 0.85
+			casualties > 1000000
+			OR = {
+				has_war_with = EQC
+				has_war_with = EQS
+				has_war_with = CRY
+				has_war_with = CHN
+			}
+		}
+		
+
+		
+		completion_reward = { 
+			
+			if = { #### Nukes Equestria Major Cities
+				limit = {
+					has_war_with = EQS
+				}
+				launch_nuke = { province = 179 state = 3 } ##Canterlot
+				launch_nuke = { province = 9741 state = 2 } ##Ponyville
+				launch_nuke = { province = 11672 state = 64 } ##Cloudsdale
+				launch_nuke = { province = 758 state = 75 } ##Manehatten
+				launch_nuke = { province = 950 state = 12 } ##Fillydekohua
+				launch_nuke = { province = 3915 state = 106 } ##Mareway
+				launch_nuke = { province = 69 state = 66 } ##Las Pegasus
+				launch_nuke = { province = 11427 state = 22 } ##Dodge City
+				launch_nuke = { province = 13011 state = 13 } ##Baltimare
+				launch_nuke = { province = 11581 state = 19 } ##Hoofington
+				launch_nuke = { province = 586 state = 15 } ##Stableside
+				launch_nuke = { province = 3937 state = 47 } ##Trotgaron
+				launch_nuke = { province = 10539 state = 525 } ##Albion
+				launch_nuke = { province = 3162 state = 74 } ##Bales
+				launch_nuke = { province = 351 state = 157 } ##Novochernushsk
+				hidden_effect = {
+					EQS = {
+						add_timed_idea = {
+							idea = Fallout
+							years = 5
+						}
+					}
+					add_nuclear_bombs = -15
+					news_event = Fallout.2
+					
+				}
+			}
+			if = { #### Nukes Commonwealth's Major Cities
+				limit = {
+					has_war_with = EQC
+				}
+
+				launch_nuke = { province = 10005  state = 356 } ##Sunset
+				launch_nuke = { province = 829 state = 362 } ##New Mareland
+				launch_nuke = { province = 7091 state = 359 } ##New Hoofington
+				launch_nuke = { province = 4143 state = 355 } ##Colton
+				hidden_effect = {
+					EQC = {
+						add_timed_idea = {
+							idea = Fallout
+							years = 5
+						}
+					}
+					add_nuclear_bombs = -4
+				}
+			}
+			if = { #### Nukes all Crystal Empire Cities
+				limit = {
+					has_war_with = CRY
+				}
+
+				launch_nuke = { province = 489 state = 344 } ##Crystal City
+				launch_nuke = { province = 9485 state = 98 } ##Rainbow Falls
+				launch_nuke = { province = 9150 state = 146 } ##Ponytown
+				launch_nuke = { province = 9236 state = 324 } ##Hedgewards
+				launch_nuke = { province = 304 state = 143 } ##Quebuck
+				hidden_effect = {
+					CRY = {
+						add_timed_idea = {
+							idea = Fallout
+							years = 5
+						}
+					}
+					add_nuclear_bombs = -5
+				}
+			}
+			if = { #### Nukes Changeling Lands Major Cities
+				limit = {
+					has_war_with = CHN
+				}
+
+				launch_nuke = { province = 11045 state = 251 } ##Vesalipolis
+				launch_nuke = { province = 722 state = 259 } ##Vraks
+				launch_nuke = { province = 11690 state = 316 } ##Volistad
+				launch_nuke = { province = 3777 state = 248 } ##Sicarus
+				launch_nuke = { province = 195 state = 309 } ##Lyctida
+				launch_nuke = { province = 1547 state = 304 } ##Neverwarm Point
+				launch_nuke = { province = 11509 state = 252 } ##Ditrysium
+				launch_nuke = { province = 12305 state = 312 } ##Gorak
+				launch_nuke = { province = 12346 state = 305 } ##Aglossata
+				launch_nuke = { province = 12501 state = 323} ##Antax
+				hidden_effect = {
+					CHN = {
+						add_timed_idea = {
+							idea = Fallout
+							years = 6
+						}
+					}
+					add_nuclear_bombs = -10
+				}
+			}
+			hidden_effect = {
+				add_stability = -0.5
+			}
+		}
+		cancel_if_invalid = yes
+		cancelable = yes
+		prerequisite = { focus = ERT_DEFCON_1 }
+	}
+
+	focus = {
+		id = ERT_DEFCON_1
+		icon = GFX_focus_DEFCON1
+		cost = 4ds0
+		x = 10
+		y = 13
+		completion_reward = { 
+			add_nuclear_bombs = 100
+			news_event = DEFCON.1
+			hidden_effect = {
+				add_stability = -0.2
+				remove_ideas = ERT_DEFCON_2
+			}
+			add_ideas = DEFCON_1
+		}
+
+		available = {
+			has_war = yes
+			threat > 0.8
+			casualties > 8000000
+		}
+		cancel_if_invalid = yes
+		prerequisite = { focus = ERT_DEFCON_2 }
+	}
+	focus = {
+		id = ERT_DEFCON_2
+		icon = GFX_focus_DEFCON2
+		cost = 3
+		x = 10
+		y = 12
+		completion_reward = { 
+			add_ideas = DEFCON_2
+			news_event = DEFCON.2
+			hidden_effect = {
+				remove_ideas = ERT_DEFCON_3
+			}
+		}
+
+		available = {
+			has_war = yes
+			threat > 0.7
+			casualties > 500000
+		}
+		cancel_if_invalid = yes
+		prerequisite = { focus = ERT_DEFCON_3 }
+	}
+	focus = {
+		id = ERT_DEFCON_3
+		icon = GFX_focus_DEFCON3
+		cost = 4
+		x = 10
+		y = 11
+		completion_reward = { 
+			add_ideas = DEFCON_3
+			remove_ideas = ERT_DEFCON_4
+			news_event = DEFCON.3
+		}
+
+		available = {
+			has_war = yes
+			threat > 0.4
+		}
+		cancel_if_invalid = yes
+		prerequisite = { focus = ERT_DEFCON_4 }
+	}
+	focus = {
+		id = ERT_DEFCON_4
+		icon = GFX_focus_DEFCON4
+		cost = 10
+		x = 10
+		y = 10
+		completion_reward = { 
+			add_ideas = DEFCON_4
+			news_event = DEFCON.4
+		}
+
+		available = {
+			threat > 0.3
+		}
+
+		cancel_if_invalid = yes
+		prerequisite = { focus = ERT_military_options }
+	}
+	
+
+	
+	############################################################################################## Politics
+	focus = {
+		id = ERT_diplomatic
+		icon = GFX_focus_Council
+		cost = 1
+		x = 27
+		y = 1
+		completion_reward = {
+			set_cosmetic_tag = Earth
+			set_politics = {
+				ruling_party = Council
+				elections_allowed = no
+			}
+			hidden_effect = {
+				add_popularity = {
+					ideology = Council
+					popularity = 1
+				}
+			}
+		}
+
+		mutually_exclusive = { focus = ERT_focus_neutrality }
+		mutually_exclusive = { focus = ERT_militarised }
+	}
+	focus = {
+		id = ERT_focus_neutrality
+		icon = GFX_focus_Director
+		cost = 1
+		x = 30
+		y = 1
+		completion_reward = {
+			set_cosmetic_tag = Earth
+			set_politics = {
+				ruling_party = Director
+				elections_allowed = yes
+			}
+			hidden_effect = {
+				add_ideas = General_staff
+				add_popularity = {
+					ideology = Director
+					popularity = 0.5
+				}
+			}
+		}
+		mutually_exclusive = { focus = ERT_diplomatic }
+		mutually_exclusive = { focus = ERT_militarised } 
+	}
+	focus = {
+		id = ERT_militarised
+		icon = GFX_focus_COS
+		cost = 1
+		x = 33
+		y = 1
+		completion_reward = {
+			set_cosmetic_tag = Earth
+			set_politics = {
+				ruling_party = CJCS
+				elections_allowed = no
+			}
+			hidden_effect = {
+				add_ideas = General_staff
+				add_popularity = {
+					ideology = CJCS
+					popularity = 0.5
+				}
+			}
+		}
+		
+		mutually_exclusive = { focus = ERT_focus_neutrality }
+		mutually_exclusive = { focus = ERT_diplomatic }
+	}
+	focus = {
+		id = ERT_authorised
+		icon = x
+		cost = 2
+		x = 27
+		y = 2
+		prerequisite = { focus = ERT_diplomatic }
+		available = {
+			threat > 0.2
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					threat < 30
+				}
+				random_list = {
+					20 = {
+						add_nuclear_bombs = 20
+						add_command_power = 30
+					}
+					80 = {
+						add_political_power = -10
+					}
+				}
+				else = {
+					limit = {
+						threat > 30
+					}
+					random_list = {
+						20 = {
+							add_political_power = -10
+						}
+						80 = {
+							add_nuclear_bombs = 20
+							add_command_power = 30
+						}
+					}
+				}
+			}
+
+		}
+	}
+	focus = {
+		id = ERT_negotiations
+		icon = GFX_focus_meeting
+		cost = 20
+		x = 30
+		y = 2
+		completion_reward = {
+			EQS = {
+				country_event = earth_negotiations.101
+			}
+		}
+		prerequisite = { focus = ERT_militarised focus = ERT_focus_neutrality focus = ERT_diplomatic }
+	}
+	###################################### A C C E P T E D   P A T H #############################################
+	focus = {
+		id = ERT_accepted
+		icon = x
+		cost = 99999
+		x = -1
+		y = 0
+		offset = {
+			x = 31
+			y = 3
+			trigger = {
+				NOT = {
+					has_completed_focus = ERT_denied
+				}
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ERT_negotiations
+			}
+		}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = ERT_denied
+				}
+			}
+			has_completed_focus = ERT_negotiations
+		}
+		prerequisite = { focus = ERT_negotiations }
+		completion_reward = {
+			add_political_power = 50
+			hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
+		}
+		
+		
+	}
+
+	focus = {
+		id = ERT_joint_programs
+		icon = x
+		cost = 36
+		x = 40
+		y = 4
+		prerequisite = {
+			focus = ERT_accepted
+		}
+		completion_reward = {
+			add_stability = 1
+		}
+	}
+
+	focus = {
+		id = ERT_programs_ponies
+		icon = GFX_focus_agreement
+		cost = 6
+		x = 41
+		y = 5
+		available = {
+			NOT = {
+				OR = {
+					has_war_with = EQS
+					has_war_with = EQC
+					has_war_with = CRY 
+					has_war_with = STG
+				}
+			}
+		}
+		completion_reward = { 
+			EQC = {
+				add_opinion_modifier = {
+					target = ERT
+					modifier = huge_increase
+				}
+			}
+			EQS = {
+				add_opinion_modifier = {
+					target = ERT
+					modifier = large_increase
+				}
+			}
+			ERT = {
+				add_opinion_modifier = {
+					target = EQS
+					modifier = huge_increase
+				}
+				add_opinion_modifier = {
+					target = EQC
+					modifier = huge_increase
+				}
+			}
+			STG = {
+				add_opinion_modifier = {
+					target = ERT
+					modifier = medium_increased
+				}
+			}
+
+		}
+	
+		prerequisite = { focus = ERT_joint_programs }
+	}
+
+	focus = {
+		id = ERT_programs_changelings
+		icon = GFX_focus_agreement_changeling
+		cost = 6
+		x = 39
+		y = 5
+		available = {
+			NOT = {
+				OR = {
+					has_war_with = CHN
+				}
+			}
+		}
+		completion_reward = { 
+			CHN = {
+				add_opinion_modifier = {
+					target = ERT
+					modifier = huge_increase
+				}
+			}
+			ERT = {
+				add_opinion_modifier = {
+					target = CHN
+					modifier = huge_increase
+				}
+			}
+		}
+		prerequisite = { focus = ERT_joint_programs }
+	}
+
+	################################### D E N I E D   P A T H #############################################
+	focus = {
+		id = ERT_denied
+		icon = x
+		cost = 99999
+		x = -1
+		y = 0
+		offset = {
+			x = 31
+			y = 3
+			trigger = {
+				NOT = {
+					has_completed_focus = ERT_accepted
+				}
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ERT_negotiations
+			}
+		}
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = ERT_accepted
+				}
+				
+			}
+			has_completed_focus = ERT_negotiations
+		}
+		
+		prerequisite = { focus = ERT_negotiations }
+		completion_reward = {
+			
+			hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
+		}
+
+	}
+
+	########### Silenced
+	focus = {
+		id = ERT_silence_operation
+		icon = GFX_focus_assassination
+		cost = 10
+		x = 20
+		y = 4
+		prerequisite = { focus = ERT_denied }
+		available = {
+			has_completed_focus = ERT_CIA_SAC
+		}
+		completion_reward = {
+			add_command_power = 50
+		}
+	}
+
+	focus = {
+		id = ERT_silence_royals
+		icon = x
+		cost = 6
+		x = 19
+		y = 5
+		prerequisite = { focus = ERT_silence_operation }
+		available = {
+			command_power > 60
+		}
+		completion_reward = {
+			add_command_power = -60
+		}
+		
+	}
+	focus = {
+		id = ERT_silence_commonwealth
+		icon = x
+		cost = 2
+		x = 20
+		y = 6
+		prerequisite = { focus = ERT_silence_operation }
+		available = {
+			command_power > 40
+		}
+		completion_reward = {
+			hidden_effect = {
+				add_command_power = -40
+			}
+			unlock_decision_tooltip = execute_silence_royal
+		}
+	}
+	focus = {
+		id = ERT_silence_crystals
+		icon = x
+		cost = 5
+		x = 21
+		y = 5
+		prerequisite = { focus = ERT_silence_operation }
+		available = {
+			command_power > 40
+		}
+		completion_reward = {
+			hidden_effect = {
+				add_command_power = -40
+			}
+			
+		}
+	}
+
+	################################### K I D N A P P E D   P A T H #############################################
+	focus = {
+		id = ERT_kidnapped
+		icon = x
+		cost = 99999
+		x = -1
+		y = 0
+		offset = {
+			x = 31
+			y = 3
+			trigger = {
+				NOT = {
+					has_completed_focus = ERT_denied
+					has_completed_focus = ERT_accepted
+				}
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = ERT_negotiations
+			}
+		}
+
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = ERT_denied
+					has_completed_focus = ERT_accepted
+				}
+			}
+			has_completed_focus = ERT_negotiations
+		}
+		prerequisite = { focus = ERT_negotiations }
+		
+		completion_reward = {
+
+
+			hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+					}
+					mark_focus_tree_layout_dirty = yes
+				}
+			}
+		}
+		
+		
+	}
+	
+
+	######################## War Plans
+
+	focus = {
+		id = ERT_war_plans
+		icon = GFX_focus_war_plans
+		cost = 7
+		x = 74
+		y = 1
+		completion_reward = {
+			unlock_decision_category_tooltip = war_plans
+		}
+	}
+
+	focus = {
+		id = ERT_intervention_equus
+		icon = GFX_focus_equus
+		cost = 15
+		x = 74
+		y = 2
+		prerequisite = { focus = ERT_war_plans }
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ERT_intervention_zebrica
+		icon = GFX_focus_zebrica
+		cost = 15
+		x = 79
+		y = 2
+		prerequisite = { focus = ERT_war_plans }
+		completion_reward = { }
+	}
+
+	focus = {
+		id = ERT_intervention_griffonia
+		icon = GFX_focus_griffonia
+		cost = 15
+		x = 69
+		y = 2
+		prerequisite = { focus = ERT_war_plans }
+		completion_reward = { }
+	}
+
+
+	focus = {
+		id = ERT_war_plan_skinwalker
+		icon = x
+		cost = 10
+		x = 72
+		y = 3
+		prerequisite = { focus = ERT_intervention_equus }
+		completion_reward = {
+			unlock_decision_tooltip = {
+				decision = execute_chamelion
+				show_effect_tooltip = yes
+				show_modifiers = yes
+			}
+		}
+	}
+
+	focus = {
+		id = ERT_war_plan_pony
+		icon = x
+		cost = 10
+		x = 76
+		y = 3
+		prerequisite = { focus = ERT_intervention_equus }
+		completion_reward = {
+			unlock_decision_tooltip = {
+				decision = execute_pony
+				show_effect_tooltip = yes
+				show_modifiers = yes
+			}
+		}
+	}
+
+	focus = {
+		id = ERT_war_plan_scales
+		icon = x
+		cost = 10
+		x = 73
+		y = 4
+		prerequisite = { focus = ERT_intervention_equus }
+		completion_reward = {
+			unlock_decision_tooltip = {
+				decision = execute_chamelion
+				show_effect_tooltip = yes
+				show_modifiers = yes
+			}
+		}
+	}
+	focus = {
+		id = ERT_war_plan_animal
+		icon = x
+		cost = 10
+		x = 75
+		y = 4
+		prerequisite = { focus = ERT_intervention_equus }
+		completion_reward = {
+			unlock_decision_tooltip = {
+				decision = execute_chamelion
+				show_effect_tooltip = yes
+				show_modifiers = yes
+			}
+		}
+	}
+	focus = {
+		id = ERT_war_plan_buffalo
+		icon = x
+		cost = 10
+		x = 74
+		y = 3
+		prerequisite = { focus = ERT_intervention_equus }
+		completion_reward = {
+			unlock_decision_tooltip = {
+				decision = execute_buffalo
+				show_effect_tooltip = yes
+				show_modifiers = yes
+			}
+		}
+	}
+	focus = {
+		id = ERT_war_plan_all_equus
+		icon = x
+		cost = 57
+		x = 74
+		y = 5
+		prerequisite = { focus = ERT_war_plan_animal }
+		prerequisite = { focus = ERT_war_plan_pony }
+		prerequisite = { focus = ERT_war_plan_skinwalker }
+		prerequisite = { focus = ERT_war_plan_buffalo }
+		prerequisite = { focus = ERT_war_plan_scales }
+		completion_reward = {
+			unlock_decision_tooltip = {
+				decision = execute_equus
+				show_effect_tooltip = yes
+				show_modifiers = yes
+			}
+		}
+	}
+
+
+
+	focus = {
+		id = ERT_war_plan_grif
+		icon = x
+		cost = 10
+		x = 68
+		y = 3
+		prerequisite = { focus = ERT_intervention_griffonia }
+		completion_reward = {
+			unlock_decision_tooltip = {
+				decision = execute_chamelion
+				show_effect_tooltip = yes
+				show_modifiers = yes
+			}
+		}
+	}
+
+
+	
+	focus = {
+		id = ERT_war_plan_stripes
+		icon = x
+		cost = 10
+		x = 78
+		y = 3
+		prerequisite = { focus = ERT_intervention_zebrica }
+	}
+	focus = {
+		id = ERT_war_plan_storm
+		icon = x
+		cost = 10
+		x = 80
+		y = 3
+		prerequisite = { focus = ERT_intervention_zebrica }
+	}
+	focus = {
+		id = ERT_war_plan_stream
+		icon = x
+		cost = x
+		x = 70
+		y = 3
+		completion_reward = { }
+		prerequisite = { focus = ERT_intervention_griffonia }
+	}
+	
+
+
+	############################################################# Settling in
+	focus = {
+		id = ERT_settle
+		icon = GFX_focus_construction
+		cost = 46
+		x = 47
+		y = 1
+		completion_reward = { 
+			add_stability = 0.2
+			add_political_power = 100
+			hidden_effect = {
+				every_state = {
+					add_core_of = ERT
+				}
+				
+			}
+		}
+	}
+	#### Layer 1
+	focus = {
+		id = ERT_allow_settlers
+		icon = x
+		cost = 30
+		x = 45
+		y = 2
+		completion_reward = { 
+			add_stability = 0.1
+			add_political_power = 100
+		}
+		prerequisite = { focus = ERT_settle }
+		mutually_exclusive = { focus = ERT_military_only focus = ERT_field_research}
+	}
+	focus = {
+		id = ERT_field_research
+		icon = x
+		cost = 26
+		x = 47
+		y = 2
+		completion_reward = { 
+			add_stability = 0.05
+			add_command_power = 2
+			add_research_slot = 2
+		}
+		prerequisite = { focus = ERT_settle }
+		mutually_exclusive = { focus = ERT_allow_settlers focus = ERT_military_only }
+
+	}
+	focus = {
+		id = ERT_military_only
+		icon = x
+		cost = 7
+		x = 49
+		y = 2
+		completion_reward = { 
+			add_stability = -0.1
+			add_command_power = 10
+			
+		}
+		prerequisite = { focus = ERT_settle }
+		mutually_exclusive = { focus = ERT_allow_settlers focus = ERT_field_research}
+
+	}
+	#### Layer 2
+	
+	focus = {
+		id = ERT_deport_other_creatures
+		icon = x
+		cost = 40
+		x = 49
+		y = 3
+		mutually_exclusive = {
+			focus = ERT_allow_other_creatures
+		}
+		prerequisite = {
+			focus = ERT_military_only
+			focus = ERT_field_research
+			focus = ERT_allow_settlers
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = ERT_allow_other_creatures
+		icon = x
+		cost = 10
+		x = 45
+		y = 3
+		mutually_exclusive = {
+			focus = ERT_deport_other_creatures
+		}
+		prerequisite = {
+			focus = ERT_military_only
+			focus = ERT_field_research
+			focus = ERT_allow_settlers
+		}
+
+	}
+	#### Layer 3
+	focus = {
+		id = ERT_launch_satellites
+		icon = GFX_focus_satellite
+		cost = 41
+		x = 47
+		y = 4
+		completion_reward = {
+			add_ideas = Satellites
+		}
+		prerequisite = {
+			focus = ERT_deport_other_creatures
+			focus = ERT_allow_other_creatures
+		}
+		mutually_exclusive = {
+			focus = ERT_UAV_recon
+		}
+	}
+	focus = {
+		id = ERT_mining
+		icon = GFX_goal_generic_construction2
+		cost = 31
+		x = 45
+		y = 4
+		completion_reward = {
+			add_ideas = mining_quarry
+		}
+		prerequisite = {
+			focus = ERT_deport_other_creatures
+			focus = ERT_allow_other_creatures
+		}
+	}
+	focus = {
+		id = ERT_UAV_recon
+		icon = x
+		cost = 1
+		x = 49
+		y = 4
+		completion_reward = {
+			
+		}
+		prerequisite = {
+			focus = ERT_deport_other_creatures
+			focus = ERT_allow_other_creatures
+		}
+		mutually_exclusive = {
+			focus = ERT_satellites
+		}
+	}
+	#### Layer 4
+	focus = {
+		id = ERT_land_mapping
+		icon = GFX_focus_map
+		cost = 30
+		x = 47
+		y = 5
+		completion_reward = {
+			remove_ideas = unfamiliar_land
+		}
+		prerequisite = {
+			focus = ERT_launch_satellites
+			focus = ERT_UAV_recon
+		}
+	}
+	focus = {
+		id = ERT_magic_research
+		icon = x
+		cost = 6
+		x = 49
+		y = 5
+		completion_reward = {
+			
+		}
+		prerequisite = {
+			focus = ERT_UAV_recon
+			focus = ERT_mining
+			focus = ERT_launch_satellites
+		}
+	}
+	focus = {
+		id = ERT_begin_improvement
+		icon = x
+		cost = 12
+		x = 45
+		y = 5
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_owned_and_controlled_by = ERT
+				}
+				add_extra_state_shared_building_slots = 10
+				set_state_flag = infrastructure_building_slot_flag
+			}
+		}
+		prerequisite = {
+			focus = ERT_UAV_recon
+			focus = ERT_mining
+			focus = ERT_launch_satellites
+		}
+	}
+
+
+
+	########################################################### Hoorah
+
+	focus = {
+		id = ERT_arsenal_deployment
+		icon = x
+		cost = 12
+		x = 59
+		y = 1
+
+	}
+
+	############## Ground Forces ###############
+	focus = {
+		id = ERT_arsenal_army
+		icon = x
+		cost = 4
+		x = 59
+		y = 2
+	}
+	focus = {
+		id = ERT_deploy_rangers
+		icon = x
+		cost = 21
+		x = 59
+		y = 2
+		completion_reward = {
+			load_oob = ERT_1007
+		}
+		prerequisite = {
+			focus = ERT_arsenal_deployment
+		}
+	}
+
+
+
+	########################################################### Agency
+	focus = {
+		id = ERT_CIA
+		icon = GFX_focus_CIA
+		cost = 1
+		x = 95
+		y = 1
+		available = {
+			has_dlc = "La Resistance"
+		} 
+		cancel_if_invalid = yes
+		completion_reward = { 
+			create_intelligence_agency = yes
+			hidden_effect = {
+				create_operative_leader = {
+					name = "'Dicks'"
+					GFX = x
+					traits = {
+						human
+					}
+					bypass_recruitment = yes
+					available_to_spy_master = yes
+					nationalities = ERT
+				}
+				create_operative_leader = {
+					name = "'Cum'"
+					GFX = x
+					traits = {
+						human
+					}
+					bypass_recruitment = yes
+					available_to_spy_master = yes
+					nationalities = ERT
+				}
+				create_operative_leader = {
+					name = "'Smoke'"
+					GFX = x
+					traits = {
+						human
+					}
+					bypass_recruitment = yes
+					available_to_spy_master = yes
+					nationalities = ERT
+				}
+				create_operative_leader = {
+					name = "'Vapor'"
+					GFX = x
+					traits = {
+						human
+					}
+					bypass_recruitment = yes
+					available_to_spy_master = yes
+					nationalities = ERT
+				}
+				create_operative_leader = {
+					name = "'Shampoo'"
+					GFX = x
+					traits = {
+						human
+					}
+					bypass_recruitment = yes
+					available_to_spy_master = yes
+					nationalities = ERT
+				}
+			}
+		}
+	}
+
+	################## C I A   D E F E N S I V E
+	focus = {
+		id = ERT_CIA_defensive
+		icon = GFX_focus_CIA_defensive
+		cost = 14
+		x = 100
+		y = 2
+		prerequisite = {
+			focus = ERT_CIA
+		}
+		
+	}
+
+	focus = {
+		id = ERT_CIA_security
+		icon = GFX_focus_CIA_security
+		cost = 21
+		x = 100
+		y = 4
+		prerequisite = {
+			focus = ERT_CIA_defensive
+		}
+		completion_reward = {
+			unlock_decision_tooltip = screening_and_arrest
+		}
+	}
+
+	################### C I A   O F F E N S I V E
+	focus = {
+		id = ERT_CIA_offensive
+		icon = GFX_focus_CIA_offensive
+		cost = 21
+		x = 90
+		y = 2
+		prerequisite = {
+			focus = ERT_CIA
+		}
+		completion_reward = {
+			
+		}
+	}
+
+
+	
+
+	################# C I A   S A C
+
+	focus = {
+		id = ERT_CIA_SAC
+		icon = GFX_focus_CIA_SAC
+		cost = 21
+		x = 95
+		y = 3
+		prerequisite = {
+			focus = ERT_CIA_offensive
+			focus = ERT_CIA_defensive
+		}
+		completion_reward = {
+			unlock_decision_category_tooltip = CIA_operations
+			
+		}
+	}
+
+	focus = {
+		id = ERT_SAC_rescue
+		icon = GFX_focus_SAC_rescue
+		cost = 16
+		x = 95
+		y = 4
+		prerequisite = {
+			focus = ERT_CIA_SAC
+		}
+		completion_reward = {
+			hidden_effect = {
+				unlock_decision_tooltip = SAC_rescue_operators
+			}
+			custom_effect_tooltip = focus_silent_gaurdian
+		}
+	}
+
+
+
+
+
+
+
+}

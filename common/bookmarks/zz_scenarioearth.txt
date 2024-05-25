@@ -1,0 +1,27 @@
+bookmarks = {
+	bookmark = {
+		name = "A New Opponent"
+		desc = "EARTH_DESC_LOC"
+		date = 1007.2.1.12
+		picture = "GFX_earth_bookmark"
+		default_country = "ERT"
+		default = yes
+		
+
+		"ERT"={
+			history = "ERT_history"
+			ideology = communism
+			ideas = {
+				Earth_supply
+				Earth_Research
+				unfamiliar_land
+			}
+			focuses = {
+				ERT_military_options
+				ERT_DEFCON_0
+				ERT_war_plans
+			}
+		}
+
+	}
+}

@@ -1,0 +1,197 @@
+﻿l_english:
+ Council:0 "The Council"
+ Council_noun:0 "COUNCIL"
+ Council_desc:0 "The Council is in charge now."
+ ERT_history:0 "It seems that a species from a world they call 'Earth' call themselves 'humans', they look a lot like hairless monkeys but we shouldn't underestimate them. They took the Cross island in less than a month without even alerting the Commonwealth of New Mareland. They are quite the intelligent and pose superior firepower but lacking in manpower."
+ ERT_history_desc:0 "Testing 1"
+ EARTH_DESC_LOC:0 "A brand new era has dawned upon this world. A new species that call themselves 'humans' arrived and have taken over of all Cross Island from the Commonwealth of New Mareland and have fortified the entire island coast."
+
+
+ human_race:0 "Human Race"
+ human_race_desc:0 "We are humans."
+ 
+
+ #Characters
+ ERT_Daniel_desc:0 "Mr. Daniel, the Chief of Joint Chief of Staff of the Unified Earth Military."
+ The_Council_desc:0 "The council, in charge of overseeing the Unified Earth."
+ ERT_Charles_desc:0 "Director Charles, a general that was promoted to 'Director of Operations' and is placed in charge of everything done in this world of fantasy creatures"
+ ERT_Standby_desc:0 "Field Officers are currently in charge of protecting the island."
+ 
+ ### C H A R A C T E R   T R A I T S ###
+ ERT_head_researcher:0 "Head of Federal Research"
+ ERT_politcal_affairs:0 "Political Affairs"
+ ERT_internal_affairs:0 "Internal Affairs"
+ ERT_CIA_director:0 "CIA Director"
+ ERT_senior_diplomat:0 "Senior Diplomat"
+ ERT_backstage_manager:0 "Backstage Manager"
+ ERT_CJCS:0 "Chairman of Joint Cheif of Staffs"
+ ERT_CoS:0 "Cheif of Staff"
+ ERT_VCJCS:0 "Vice Chairman of Joint Cheif of Staffs"
+ ERT_GoArF:0 "General of the Air Force"
+ ERT_FA:0 "Fleet Admiral"
+ ERT_MCC:0 "Marine Corp Commander"
+ ERT_GoA:0 "General of the Army"
+
+
+
+ #Party names
+ ERT_Long_Name_Military:0 "FUCK IT, WE'RE GOING TO WAR!"
+ ERT_Long_Name_Liber:0 "The Council shall decide the next path."
+ ERT_Long_Name_Peace:0 "We shall not partake in their conflicts."
+ ERT_Long_Name_No:0 "Field Officers currently in Charge."
+
+
+ #Country names
+ ERT_neutrality:0 "Unified Earth"
+ ERT_Council:0 "Unified Earth"
+ ERT_CJCS:0 "Unified Earth Military"
+ ERT_Director:0 "Unified Earth Special State"
+ ERT_neutrality_DEF:0 "Unified Earth"
+ ERT_Council_DEF:0 "Unified Earth"
+ ERT_CJCS_DEF:0 "Unified Earth"
+ ERT_Director_DEF:0 "Unified Earth"
+
+
+ #ideas descriptions
+ Advanced_training_desc:0 "Our men are being trained on earth for quality, not quantity."
+ Earth_supply_desc:0 "We're relying on our resources back on earth."
+ Modern_tech_desc:0 "The creatures here seem to be centuries behind us in technology."
+ advanced_technology:0 "Our Strongest super computers are now in session!"
+
+ #Focus
+ ERT_military_options:0 "Military Options"
+ ERT_military_options_desc:0 "The options are in the table, what's our move?"
+ ERT_war_crimes:0 "Fuck Geneva"
+ ERT_war_crimes_desc:0 "The Geneva Convention may be followed by the UE, however... \n§RThe creatures in this world haven't signed the Geneva Convention yet.§!\n§RAnd *human* rights only apply to humans§!"
+ ERT_geneva:0 "Follow Geneva"
+ ERT_geneva_desc:0 "These creatures may have not signed the Geneva Convention and are from another world, but §Gwe're humane enough to follow them.§!"
+ ERT_WMDs:0 "Weapons of Mass Destruction"
+ ERT_WMDs_desc:0 "Let's just reveal our hand and show that we own the arena now.\n\n§Y(This is currently in the making and these focus' do nothing at the moment.)§!"
+ ERT_WMD_chemical:0 "Chemical Weapons"
+ ERT_WMD_chemical_desc:0 "Utilize gas, nerve agents, basically anything that can be used to kill or harm these §yCreatures§!."
+ ERT_WMD_biological:0 "Biological Weapons"
+ ERT_WMD_biological_desc:0 "Utilize genetically modified viruses or diseases to disrupt and kill the population of a §yNation§!."
+ ERT_WMD_radiological:0 "Radiological Weapons"
+ ERT_WMD_radiological_desc:0 "Utilize RRDs, REDs, and RECOs in cities of §yNations§! to disrupt the population and resources."
+ ERT_WWD_nuclear:0 "Nuclear Weapons"
+ ERT_WWD_nuclear_desc:0 "Utilize nukes and other high powered nucleared weapons againsts these §yCreatures§!."
+ ERT_land_mapping:0 "Land Mapping"
+ ERT_land_mapping_desc:0 "We now have a satellite network set up, let's start mapping this world.."
+ ERT_programs_ponies:0 "Joint Programs w/ Ponies"
+ ERT_programs_ponies_desc:0 "'Can't believe we're actually doing programs with these... creatures...' -Random UE Soldier"
+ ERT_programs_changelings:0 "Joint Programs w/ Changelings"
+ ERT_programs_changelings_desc:0 "'The Council must be out of their fucking minds... Why the changelings!?' -Random UE Soldier"
+ ERT_settle:0 "Settling In"
+ ERT_settle_desc:0 "Begin fortifying the island and converting all their infastructure to our own use."
+ ERT_CIA:0 "Send in CIA"
+ ERT_CIA_desc:0 "Let's send in the Central Intelligence Agency to gather more information with their special tactics and equipment"
+ ERT_chaos:0 "Radioactive Assassination"
+ ERT_chaos_desc:0 "Screw sending in special forces, we need to send in a true message! Nuke Canterlot and Sunset and take out Jet Set and Celestia with it."
+ ERT_authorised:0 "Nuclear Vote"
+ ERT_authorised_desc:0 "The Council will vote on whether to deploy the usage of thermonuclear bombs in Equestria. The chances of majority of the vote to grant the usage of thermonuclear will increase depending on the world tension level."
+ ERT_destroy_pony_race:0 "Operation Loose Knot"
+ ERT_destroy_pony_race_desc:0 "These ponies refuse our demands. It's time to make sure to refuse their free trial of life!"
+ ERT_silence_operation:0 "Operation Silenced"
+ ERT_silence_operation_desc:0 "Operation Silenced; \nSend the Special Activity Center best operatives deep into enemy lines and take out the current leaders of the nation. Though be careful, there's always a chance of failure."
+ ERT_silence_royals:0 "Target Equestria"
+ ERT_silence_royals_desc:0 "Prepare and execute the targeted country; \nTARGET; [EQS.GetLeader]"
+ ERT_silence_commonwealth:0 "Target New Mareland"
+ ERT_silence_commonwealth_desc:0 "Prepare and execute the targeted country; \nTARGET; [EQC.GetLeader]"
+ ERT_silence_crystals:0 "Target Crystal Empire"
+ ERT_silence_crystals_desc:0 "Prepare and execute the targeted country; \nTARGET; [CRY.GetLeader]"
+ ERT_CIA_defensive:0 "Defense Plans"
+ ERT_CIA_defensive_desc:0 "Protecting our land either with our mind or our muscles."
+ ERT_CIA_offensive:0 "Offense Plans"
+ ERT_CIA_offensive_desc:0 "We got options to 'protect' our new land."
+ ERT_CIA_SAC:0 "Special Activity Center"
+ ERT_CIA_SAC_desc:0 "With the SAC in our arsenal, the other nations of this world will never know it was us that causes the chaos behind the curtains."
+ ERT_SAC_rescue:0 "Operation Silent Guardian"
+ ERT_SAC_rescue_desc:0 "Our own kind is acting against us, us humans are too easy to identify which results in riskier intel gathering and operations. SAC will be deployed to rescue any captured operatives.\n\n(Does not rescue from 'Forced Into Hiding')"
+ focus_silent_gaurdian:0 "Able to rescue captured operatives in nations but are not able to rescue operatives that are forced into hiding."
+ ERT_CIA_security:0 "National Security"
+ ERT_CIA_security_desc:0 "Keeping our intel clean from any foreign power that have an interest on them."
+
+
+
+ success_kill_loc:0 "§GSuccessful Covert Operation§!"
+ success_but_traced_loc:0 "§YSuccessful Operation but with Traces§!"
+ operation_failure_loc:0 "§ROperation Failure§!"
+ 
+
+
+
+
+
+    ##### DEFCON Focus & Ideas
+ ERT_DEFCON_0:0 "§bSTRIKE OMEGA!§!"
+ ERT_DEFCON_0_desc:0 "Capital and major cities of Equestria, Commonwealth of Newmareland, Crystal Empire, and Changeling Lands will be nuked to send a message, whether under our control or not!"
+ ERT_DEFCON_1:0 "§tCOCKED PISTOL§!"
+ ERT_DEFCON_1_desc:0 "The Council has approved the deployment of thermonuclear ICBMs, however it will take a long time to deliver them to the island."
+ ERT_DEFCON_2:0 "FAST PACE"
+ ERT_DEFCON_2_desc:0 "These war(s) is becoming quite costly for us. RAISE THE LEVEL!"
+ ERT_DEFCON_3:0 "§8ROUND HOUSE§!"
+ ERT_DEFCON_3_desc:0 "These creatures are tougher than we thought, let's raise the level just in case."
+ ERT_DEFCON_4:0 "§7DOUBLE TAKE§!"
+ ERT_DEFCON_4_desc:0 "Let's just stay prepared, the nations of this world don't quite seem to be too friendly."
+ DEFCON_1_desc:0 "The Council has raised the Defense Readiness Condition to level 1!"
+ DEFCON_2_desc:0 "The Council has raised the Defense Readiness Condition to level 2!"
+ DEFCON_3_desc:0 "The Council has raised the Defense Readiness Condition to level 3!"
+ DEFCON_4_desc:0 "The Joint Chief of Staff have convinced the Council to raise the nation's Defense Readiness Condition to level 4."
+
+ ##militatised Focus
+ ERT_war_plans:0 "War Plan Divison"
+ ERT_war_plans_desc:0 "Just like the war plans the U.S. had decades ago, we're just going to copy the idea."
+ ERT_intervention_equus:0 "Intervention Equus"
+ ERT_intervention_equus_desc:0 "War plans on the continent region of Equus."
+ ERT_intervention_zebrica:0 "Intervention Zebrica"
+ ERT_intervention_zebrica_desc:0 "War plans on the continent region of Zebrica"
+ ERT_intervention_griffonia:0 "Intervention Griffonia"
+ ERT_intervention_griffonia_desc:0 "War plans on the continent region of Griffonia"
+ ERT_war_plan_skinwalker:0 "War Plan Chameleon"
+ ERT_war_plan_skinwalker_desc:0 "The Changelings seem hostile... Let's get ready just in case."
+ ERT_war_plan_pony:0 "War Plan Pony"
+ ERT_war_plan_pony_desc:0 "The ponies seeem friendly, at first... Let's get ready just in case they reveal their true intentions."
+ ERT_war_plan_scales:0 "War Plan Scales"
+ ERT_war_plan_scales_desc:0 "The dragons seem to be like the changelings, but more scaly... Let's get ready just in case."
+ ERT_war_plan_grif:0 "War Plan Claw"
+ ERT_war_plan_grif_desc:0 "These Griffins don't seem very friendly... Let's get ready just in case they turn out to be what we thought they were."
+ ERT_war_plan_stripes:0 "War Plan Stripes"
+ ERT_war_plan_stripes_desc:0 "We're not threatened by the zebra's, but why not just be prepared?"
+ ERT_war_plan_animal:0 "War Plan Animal"
+ ERT_war_plan_animal_desc:0 "Looks like this region of their world got other creatures that resemble animals back from our world, let's stay vigilent"
+ ERT_war_plan_buffalo:0 "War Plan Buff"
+ ERT_war_plan_buffalo_desc:0 "Seriously... You're gonna waste 35 days on this focus for a minor nation?"
+ ERT_war_plan_storm:0 "War Plan Storm"
+ ERT_war_plan_storm_desc:0 "A war plan against... monkeys?"
+ ERT_war_plan_stripes:0 "War Plan Stripes"
+ ERT_war_plan_stripes_desc:0 "A war plan against... zebras..."
+
+ ##Politics
+ ERT_diplomatic:0 "The Council"
+ ERT_diplomatic_desc:0 "Choosing this path results in the Council of the Unified Earth in charge where they decide going for a diplomatic route in the world of Equestria."
+ ERT_focus_neutrality:0 "The Director"
+ ERT_focus_neutrality_desc:0 "Choosing this path results in one of the Chief of Staff of either military branch to be placed in charge of all our operations in the world."
+ ERT_militarised:0 "The Chief of Staff"
+ ERT_militarised_desc:0 "Choosing this path results in the Chairman of the Joint Chief of Staff Mr. Daniel being placed in charge of all our operations in Equestria."
+ ERT_kidnapped:0 "Retaliation Path"
+ ERT_kidnapped_desc:0 "The pony nation have kidnapped the representatives we sent, §Rthis will not be tolerated...§!"
+ ERT_denied:0 "Demands Denied"
+ ERT_denied_desc:0 "The pony nation have denied our demands, §Rthey shall burn with the others.§!"
+ ERT_accepted:0 "Demands Accepted"
+ ERT_accepted_desc:0 "The pony nation have accepted our demands, §Glet us improve our relations.§!"
+
+
+
+ #####Decisions
+ CIA_operations:0 "CIA Operations"
+ CIA_SAC_operations:0 "Special Activity Center"
+ execute_silence_royal:0 "Operation Silence; Equestria"
+ screening_and_arrest:0 "Screening and Arrest"
+ 
+ 
+ SAC_rescue_operatives:0 "Rescue any captured operatives"
+ SAC_rescue_operation_0:0 "The Special Activity Center will send in a special team to infiltrate the nation that have captured our own men(or women..)."
+ SAC_rescue_operation_1:0 "Captured operatives will be rescued by SAC."
+
+ ###### Focus shortcuts
+ WMD_focus:0 "Deploy the CBRN division."

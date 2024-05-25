@@ -1,0 +1,484 @@
+﻿add_namespace = earth
+add_namespace = earth_news
+add_namespace = earth_negotiations
+add_namespace = earth_assassinations
+add_namespace = earth_WMDs
+
+
+######################## Events
+country_event = {
+	id = earth_negotiations.101
+	title = "Earth-Equestrian Negotiations"
+	desc = earth.101.d
+	picture = x
+	fire_only_once = yes
+	major = yes
+	trigger = {
+		ERT = {
+			has_completed_focus = ERT_negotiations
+		}
+		tag = EQS
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = "Deny Their Meeting"
+		
+		hidden_effect = {
+			ERT = {
+				complete_national_focus = ERT_denied
+				country_event = earth_negotiations.102
+				add_opinion_modifier = {
+					target = EQS
+					modifier = declines_demands
+				}
+			}
+			add_opinion_modifier = {
+				target = ERT
+				modifier = declines_demands
+			}
+		}
+		ai_chance = {
+			base = 0.1
+		}
+		
+	}
+	option = {
+		name = "Accept Their Meeting"
+		hidden_effect = {
+			ERT = {
+				complete_national_focus = ERT_accepted
+				country_event = earth_negotiations.103
+				add_opinion_modifier = {
+					target = EQS
+					modifier = accepted_demands
+				}
+			}
+			add_opinion_modifier = {
+				target = ERT
+				modifier = accepted_demands
+			}
+		}
+		
+		ai_chance = {
+			base = 0.9
+		}
+	}
+}
+country_event = {
+	id = earth_negotiations.102
+	title = "Equestria & Allies Denies Our Call!"
+	desc = earth_negotiations.102.d
+	picture = x
+	fire_only_once = yes
+	trigger = {
+		original_tag = ERT
+	}
+	is_triggered_only = yes
+	
+	option = {
+		name = "They Shall Burn Alone."
+		add_opinion_modifier = {
+			target = EQS
+			modifier = declines_negotiations
+		}
+		add_opinion_modifier = {
+			target = EQC
+			modifier = declines_negotiations
+		}
+		add_opinion_modifier = {
+			target = CRY
+			modifier = declines_negotiations
+		}
+	}
+}
+country_event = {
+	id = earth_negotiations.103
+	title = "Equestria & Allies Accepted to Negotiate"
+	desc = earth_negotiations.103.d
+	picture = x
+	fire_only_once = yes
+	trigger = {
+		original_tag = ERT
+	}
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = "Send them our offers and demands."
+		add_opinion_modifier = {
+			target = EQS
+			modifier = accepted_negotiations
+		}
+		add_opinion_modifier = {
+			target = EQC
+			modifier = accepted_negotiations
+		}
+		add_opinion_modifier = {
+			target = CRY
+			modifier = accepted_negotiations
+		}
+
+		EQS = {
+			country_event = earth_negotiations.104
+			country_event = earth_negotiations.105
+			country_event = earth_negotiations.106
+
+		}
+
+	}
+} 
+country_event = {
+	id = earth_negotiations.104
+	title = "Request to sign Earth's Geneva Convention"
+	desc = earth_negotiations.104.d
+	picture = x
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = EQS
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = "Sign the Convention"
+		ai_chance = {
+			base = 0.95
+		}
+		hidden_effect = {
+			CRY = {
+				add_ideas = Geneva_Convention_signed
+			}
+			EQC = {
+				add_ideas = Geneva_Convention_signed
+			}
+			ERT = {
+				country_event = earth_negotiations.107
+			}
+			add_ideas = Geneva_Convention_signed
+
+
+			
+		}
+	}
+	option = {
+		name = "Reject the Convention"
+		ai_chance = {
+			base = 0.05
+		}
+		hidden_effect = {
+			ERT = {
+				country_event = earth_negotiations.108
+				add_ideas = Geneva_Convention_rejected
+			}
+		}
+	}
+}
+country_event = {
+	id = earth_negotiations.105
+	title = "Earth Demands Full Control of the Island"
+	desc = earth_negotiations.105.d
+	picture = x
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = EQS
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = "Grant Full Control"
+		ai_chance = {
+			base = 0.55
+		}
+		hidden_effect = {
+			ERT = {
+				country_event = earth_negotiations.109
+			}
+			361 = {
+				remove_claim_by = EQC
+			}
+			360 = {
+				remove_core_of = EQC
+			}
+			675 = {
+				remove_claim_by = EQC
+			}
+			676 = {
+				remove_core_of = EQC
+			}
+		}
+	}
+	option = {
+		name = "Grant Partial Control"
+		ai_chance = {
+			base = 0.3
+		}
+		hidden_effect = {
+			ERT = {
+				country_event = earth_negotiations.110
+			}
+			361 = {
+				remove_core_of = EQC
+			}
+		}
+	}
+	option = {
+		name = "Reject Demands"
+		ai_chance = {
+			base = 0.15
+		}
+		hidden_effect = {
+			ERT = {
+				country_event = earth_negotiations.111
+			}
+		}
+	}
+}
+country_event = {
+	id = earth_negotiations.106
+	title = "Request of Earth setting up Embassies in Cities"
+	desc = earth_negotiations.106.d
+	picture = x
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = EQS
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = "Agree with Request"
+		ai_chance = {
+			base = 0.85
+		}
+		add_ideas = Earth_Equestrian_Embassy
+		ERT = {
+			add_ideas = Earth_Equestrian_Embassy
+		}
+		hidden_effect = {
+			ERT = {
+				country_event = earth_negotiations.112
+			}
+		}
+	}
+	option = {
+		name = "Reject the Request"
+		ai_chance = {
+			base = 0.15
+		}
+		hidden_effect = {
+			ERT = {
+				country_event = earth_negotiations.113
+			}
+		}
+	}
+}
+country_event = {
+	id = earth_negotiations.107
+	title = "Equestria Signed the Geneva Convention"
+	desc = earth_negotiations.107.d
+	fire_only_once = yes
+	picture = x
+
+	trigger = {
+		original_tag = ERT
+	}
+	is_triggered_only = yes
+}
+country_event = {
+	id = earth_negotiations.108
+	title = "Equestria Rejects the Geneva Convention"
+	desc = earth_negotiations.108.d
+	fire_only_once = yes
+	picture = x
+
+	trigger = {
+		original_tag = ERT
+	}
+	is_triggered_only = yes
+}
+country_event = {
+	id = earth_negotiations.109
+	title = "Equestria & Allies Hands Over The Island"
+	desc = earth_negotiations.109.d
+	fire_only_once = yes
+	picture = x
+
+	trigger = {
+		original_tag = ERT
+	}
+	is_triggered_only = yes
+}
+country_event = {
+	id = earth_negotiations.110
+	title = "Equestria & Allies Hands Only Half of The Island"
+	desc = earth_negotiations.110.d
+	fire_only_once = yes
+	picture = x
+
+	trigger = {
+		original_tag = ERT
+	}
+	is_triggered_only = yes
+}
+country_event = {
+	id = earth_negotiations.111
+	title = "Equestria & Allies Rejects Handing Over The Island"
+	desc = earth_negotiations.111.d
+	fire_only_once = yes
+	picture = x
+
+	trigger = {
+		original_tag = ERT
+	}
+	is_triggered_only = yes
+}
+country_event = {
+	id = earth_negotiations.112
+	title = "Equestria Agrees on Setting Ebassies"
+	desc = earth_negotiations.112.d
+	fire_only_once = yes
+	picture = x
+
+	trigger = {
+		original_tag = ERT
+	}
+	is_triggered_only = yes
+}
+country_event = {
+	id = earth_negotiations.113
+	title = "Equestria Doesn't Want an Embassy"
+	desc = earth_negotiations.113.d
+	fire_only_once = yes
+	picture = x
+
+	trigger = {
+		original_tag = ERT
+	}
+	is_triggered_only = yes
+}
+
+
+#################################################### NEWS
+
+news_event = {
+	id = earth_news.0
+	title = "A New Race Has Landed!"
+	desc = earth_news.0.d
+	picture = GFX_Earth_has_landed
+	major = yes
+	fire_only_once = yes
+	fire_for_sender = yes 
+	option = { name = "How Interesting" }
+}
+
+
+news_event = {
+	id = earth_assassinations.1
+	title = assassination_1
+	desc = earth_assassinations.1.d
+	picture = GFX_sniper
+	fire_only_once = no
+	trigger = {
+		ERT = {
+			has_decision = execute_silence_royal
+		}
+	}
+	is_triggered_only = yes
+	option = {
+		name = "Great Job SAC"
+		hidden_effect = {
+			add_command_power = 10
+		}
+	}
+}
+news_event = {
+	id = earth_assassinations.2
+	title = assassination_2
+	desc = earth_assassinations.2.d
+	picture = GFX_heli
+	fire_only_once = no
+	trigger = {
+		ERT = {
+			has_decision = execute_silence_royal
+		}
+	}
+	is_triggered_only = yes
+	option = {
+		name = "For fuck sakes SAC! Try again!"
+		hidden_effect = {
+			add_command_power = -10
+		}
+	}
+}
+news_event = {
+	id = earth_assassinations.3
+	title = assassination_3
+	desc = earth_assassinations.3.d
+	picture = GFX_sniper
+	fire_only_once = no
+	trigger = {
+		ERT = {
+			has_decision = execute_silence_royal
+			days = 6
+		}
+	}
+	is_triggered_only = yes
+	option = {
+		name = "Great Job SAC"
+		hidden_effect = {
+			add_command_power = 10
+		}
+	}
+}
+
+news_event = {
+	id = earth_news.1
+	title = "Public Outcry"
+	desc = earth_news.1.d
+	picture = x
+	fire_only_once = no
+	
+	trigger = {
+		ERT = {
+			has_war = yes
+		}
+	}
+	option = {
+		name = "Blame Opposition"
+	}
+	option = {
+		name = "Accept Blame"
+	}
+	option = {
+		name = "Deny Accusations"
+	}
+}
+
+news_event = {
+	id = earth_news.2
+	title = "Humans revealed to hold ponies hostage!"
+	desc = earth_news.2.d
+	picture = x
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		date = 1008.1.4
+	}
+	
+	mean_time_to_happen = {
+		years = 2
+	}
+
+	option = {
+		name = "Whomp Whomp"
+		ai_chance = {
+			base = 100
+		}
+	}
+	immediate = {
+		
+	}
+}
